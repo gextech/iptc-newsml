@@ -10,7 +10,7 @@ buildscript {
 
 plugins {
   id "com.jfrog.bintray" version "1.4"
-  id 'net.researchgate.release' version '2.1.2'
+  id 'net.researchgate.release' version '2.3.4'
 }
 
 apply plugin: 'maven-publish'
@@ -134,4 +134,3 @@ bintray {
   }
 }
 
-createReleaseTag.dependsOn bintrayUpload
