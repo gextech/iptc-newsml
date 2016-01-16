@@ -1,22 +1,16 @@
 package gex.newsml
 
-import javax.xml.transform.dom.DOMSource
-import javax.xml.transform.*
+import gex.newsml.NewsMLTool
 import gex.newsml.v12.NewsML
 import gex.newsml.nitf.Nitf
 import spock.lang.*
-import javax.xml.bind.*
-import javax.xml.transform.stream.*
 
 class NewsMLv12Spec extends Specification {
 
   @Unroll
   def 'We can parse #file'() {
     expect:
-      JAXBContext jc = JAXBContext.newInstance('gex.newsml.v12')
-      Unmarshaller unmarshaller = jc.createUnmarshaller()
-      StreamSource streamSource = new StreamSource(getClass().getResourceAsStream(file))
-      NewsML newsItem = unmarshaller.unmarshal(streamSource, NewsML).value
+		  NewsML newsItem = NewsMLTool.parseV12Message(getClass().getResourceAsStream(file))
       newsItem != null
 
     where:
@@ -24,17 +18,8 @@ class NewsMLv12Spec extends Specification {
 	}
 
   def 'Test afp file'() {
-    setup:
-      JAXBContext nitfJc = JAXBContext.newInstance('gex.newsml.nitf')
-      Unmarshaller nitfUnmarshaller = nitfJc.createUnmarshaller()
-
-      JAXBContext jc = JAXBContext.newInstance('gex.newsml.v12')
-      Unmarshaller unmarshaller = jc.createUnmarshaller()
-      StreamSource streamSource = new StreamSource(getClass().getResourceAsStream('/AFP_751HA.xml'))
-
     when:
-      JAXBElement<NewsML> element = unmarshaller.unmarshal(streamSource, NewsML)
-      NewsML item = element.value
+      NewsML item = NewsMLTool.parseV12Message(getClass().getResourceAsStream('/AFP_751HA.xml'))
 
     then:
       item.newsItem.size() == 1
@@ -69,11 +54,7 @@ class NewsMLv12Spec extends Specification {
       }
 
     when:
-      def document = nitfItem.ownerDocument
-      String string = documentToString(document)
-      streamSource = new StreamSource(new StringReader(string))
-
-      Nitf nitf = nitfUnmarshaller.unmarshal(streamSource, Nitf).value
+      Nitf nitf = NewsMLTool.elementToNitf(nitfItem)
 
     then:
       nitf
@@ -82,28 +63,11 @@ class NewsMLv12Spec extends Specification {
   }
 
   def 'Test invalid file'() {
-    setup:
-      JAXBContext jc = JAXBContext.newInstance('gex.newsml.v12')
-      Unmarshaller unmarshaller = jc.createUnmarshaller()
-
     when:
-      unmarshaller.unmarshal(getClass().getResourceAsStream('/invalid.file'))
+      NewsMLTool.parseV12Message(getClass().getResourceAsStream('/invalid.file'))
 
     then:
-      thrown(UnmarshalException)
-  }
-
-  private String documentToString(def doc) {
-    DOMSource domSource = new DOMSource(doc)
-    StringWriter writer = new StringWriter()
-    StreamResult result = new StreamResult(writer)
-    TransformerFactory tf = TransformerFactory.newInstance()
-    Transformer transformer = tf.newTransformer()
-    transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8")
-    transformer.setOutputProperty(OutputKeys.INDENT, "yes")
-    transformer.transform(domSource, result)
-    writer.flush()
-    writer.toString()
+			thrown(NewsMLException)
   }
 
 }
