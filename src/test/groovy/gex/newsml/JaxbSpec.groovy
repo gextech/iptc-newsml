@@ -10,17 +10,17 @@ import javax.xml.transform.stream.*
 
 class JaxbSpec extends Specification {
 
-	@Unroll
+  @Unroll
   def 'We can parse #file'() {
     expect:
       JAXBContext jc = JAXBContext.newInstance('gex.newsml.v12')
       Unmarshaller unmarshaller = jc.createUnmarshaller()
       StreamSource streamSource = new StreamSource(getClass().getResourceAsStream(file))
-			NewsML newsItem = unmarshaller.unmarshal(streamSource, NewsML).value
-			newsItem != null
+      NewsML newsItem = unmarshaller.unmarshal(streamSource, NewsML).value
+      newsItem != null
 
     where:
-      file << ['/AFP_751HA.xml', '/BAS-Y-MUNDO-MXC_20160116_1402.XML', '/DV2209430.xml']
+      file << ['/AFP_751HA.xml', '/BAS-Y-MUNDO-MXC_20160116_1402.XML', 'DV2209430.xml']
 	}
 
   def 'Test afp file'() {
