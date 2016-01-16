@@ -10,6 +10,14 @@ A newsml parser for g2 and 1.2
 
 [!["JDK"](https://img.shields.io/badge/JDK-8.0+-F30000.svg?style=flat)](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
+## Repository
+
+This is hosted in bintray you need to add: https://dl.bintray.com/gextech/oss/ to your repositories and then the dependency:
+
+```
+gex.newsml:iptc-newsml:0.1.0
+```
+
 ## Usage
 
 You can use the NewsMLTool class in order to parse NewsML v1.2 and G2 versions, it is simple enought just do it like this:
