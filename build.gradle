@@ -1,11 +1,20 @@
-repositories {
-  jcenter()
+plugins {
+  id "com.jfrog.bintray" version "1.4"
+  id 'net.researchgate.release' version '2.1.2'
 }
 
+apply plugin: 'maven-publish'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'java'
 apply plugin: 'groovy'
+
+import java.text.SimpleDateFormat
+
+repositories {
+  jcenter()
+}
+
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
@@ -14,3 +23,104 @@ dependencies {
 	compile 'org.projectlombok:lombok:1.16.6'
   testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
 }
+
+Date buildTimeAndDate = new Date()
+ext {
+  buildDate = new SimpleDateFormat('dd-MMM-yyyy').format(buildTimeAndDate)
+  buildTime = new SimpleDateFormat('hh:mm aa').format(buildTimeAndDate)
+}
+
+def jarManifestAttributes = [
+  'Built-By'  : System.properties['user.name'],
+  'Created-By': System.properties['java.version'] + ' (' + System.properties['java.vendor'] + ' ' + System.getProperty("java.vm.version") + ")",
+  'Build-Date': buildDate,
+  'Build-Time': buildTime]
+
+jar {
+  manifest {
+    attributes(jarManifestAttributes)
+  }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+  classifier = 'sources'
+  from sourceSets.main.allSource
+}
+
+artifacts {
+  archives sourcesJar
+}
+
+publishing {
+  publications {
+    mavenJava(MavenPublication) {
+      from components.java
+
+      it.pom.getRuntimeDependencies().clear()
+
+      artifact sourcesJar
+
+      pom.withXml {
+        def root = asNode()
+        root.appendNode('name', project.name)
+        root.appendNode('description', project.description)
+        root.appendNode('url', 'https://github.com/gextech/iptc-newsml')
+        root.appendNode('inceptionYear', '2016')
+
+        def scm = root.appendNode('scm')
+        scm.appendNode('url', 'https://github.com/gextech/iptc-newsml')
+        scm.appendNode('connection', 'scm:https://iamedu@github.com/gextech/iptc-newsml.git')
+        scm.appendNode('developerConnection', 'scm:git@github.com:gextech/iptc-newsml.git')
+
+        def license = root.appendNode('licenses').appendNode('license')
+        license.appendNode('name', 'The Apache Software License, Version 2.0')
+        license.appendNode('url', 'http://www.apache.org/licenses/LICENSE-2.0.txt')
+        license.appendNode('distribution', 'repo')
+
+        def developers = root.appendNode('developers')
+        def iamedu = developers.appendNode('developer')
+        iamedu.appendNode('id', 'iamedu')
+        iamedu.appendNode('name', 'Eduardo Díaz Real')
+        iamedu.appendNode('email', 'iamedu@gmail.com')
+      }
+    }
+  }
+}
+
+bintray {
+  user = project.hasProperty('bintrayUsername') ? bintrayUsername : ''
+  key = project.hasProperty('bintrayApiKey') ? bintrayApiKey : ''
+
+  publications = ['mavenJava']
+  dryRun = false //Whether to run this as dry-run, without deploying
+  publish = true //If version should be auto published after an upload
+  pkg {
+    repo = 'oss'
+    userOrg = 'gextech'
+    name = project.name
+    desc = project.description
+    websiteUrl = 'https://github.com/gextech/iptc-newsml'
+    issueTrackerUrl = 'https://github.com/gextech/iptc-newsml/issues'
+    vcsUrl = 'https://github.com/gextech/iptc-newsml.git'
+    licenses = ['Apache-2.0']
+    labels = ['gex', 'iptc', 'newsml', 'parser']
+    publicDownloadNumbers = true
+    //Optional version descriptor
+    version {
+      name = project.version
+      desc = project.description
+      // gpg {
+      //   sign = project.hasProperty('bintrayGExGpgPassphrase')
+      //   passphrase = project.hasProperty('bintrayGExGpgPassphrase') ? bintrayGExGpgPassphrase : ''
+      // }
+      // mavenCentralSync {
+      //   sync = false
+      //   user = ''
+      //   password = ''
+      //   close = '1'
+      // }
+    }
+  }
+}
+
+createReleaseTag.dependsOn bintrayUpload

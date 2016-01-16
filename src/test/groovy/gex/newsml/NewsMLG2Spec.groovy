@@ -1,23 +1,13 @@
 package gex.newsml
 
-import javax.xml.transform.dom.DOMSource
-import javax.xml.transform.*
 import gex.newsml.g2.*
 import spock.lang.*
-import javax.xml.bind.*
-import javax.xml.transform.stream.*
 
 class NewsMLG2Spec extends Specification {
 
 	def 'We should be able to parse newsml g2 content'() {
-		setup:
-			JAXBContext jc = JAXBContext.newInstance('gex.newsml.g2')
-			Unmarshaller unmarshaller = jc.createUnmarshaller()
-			StreamSource streamSource = new StreamSource(getClass().getResourceAsStream('/201601026085EY-MIDEAST-CRISISSYRIA_FIGHTERS.xml'))
-
 		when:
-			NewsMessage newsMessage = unmarshaller.unmarshal(streamSource, NewsMessage).value
-
+			NewsMessage newsMessage = NewsMLTool.parseG2Message(getClass().getResourceAsStream('/201601026085EY-MIDEAST-CRISISSYRIA_FIGHTERS.xml'))
 
 		then:
 			newsMessage
