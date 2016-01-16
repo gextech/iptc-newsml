@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import lombok.ToString;
 
 /**
  * A natural-language description of, or statement about, the current element. The optional TranslationOf attribute is a pointer to another Comment element, of which this one is a direct translation. The FormalName and associated attributes were added in version 1.1
@@ -41,6 +42,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlType(name = "CommentType", propOrder = {
     "value"
 })
+@ToString
 public class CommentType {
 
     @XmlValue

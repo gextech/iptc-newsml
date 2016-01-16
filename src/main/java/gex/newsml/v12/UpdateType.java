@@ -4,7 +4,6 @@ package gex.newsml.v12;
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
  * <p>Java class for updateType.
  * 

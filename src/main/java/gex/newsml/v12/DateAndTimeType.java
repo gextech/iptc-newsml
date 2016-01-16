@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import lombok.ToString;
 
 /**
  * A formal representation of a date and, optionally, time, expressed in ISO 8601 Basic Format, as described in the comment to the NewsMLDateTime simple type declaration above.
@@ -35,6 +36,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlType(name = "DateAndTimeType", propOrder = {
     "value"
 })
+@ToString
 public class DateAndTimeType {
 
     @XmlValue

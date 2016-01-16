@@ -16,6 +16,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import lombok.ToString;
 
 /**
  * A wrapper for all or part of the text of a piece of text, which provides a pointer to an item of data corresponding formally to what is being described here in natural language. The Href attribute identifies the relevant data, and may be an http URL or a NewsML URN as described in the comment to PublicIdentifier, optionally including a fragment identifier. Alternatively, it can be a simple fragment identifier consisting of a # character followed by the value of the Duid of an element in the current document.
@@ -45,6 +46,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlType(name = "OriginType", propOrder = {
     "content"
 })
+@ToString
 public class OriginType {
 
     @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)

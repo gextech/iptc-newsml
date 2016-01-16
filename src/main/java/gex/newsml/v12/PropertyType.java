@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import lombok.ToString;
 
 /**
  * A property of a NewsItem, NewsComponent, ContentItem, Topic, Location or Party. The property has a name and either  a simple Value or a complex value consisting of a set of further properties.  The property has a name and either  a simple Value or a complex value consisting of a set of further properties. 
@@ -46,6 +47,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlType(name = "PropertyType", propOrder = {
     "property"
 })
+@ToString
 public class PropertyType {
 
     @XmlElement(name = "Property")

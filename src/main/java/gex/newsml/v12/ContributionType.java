@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import lombok.ToString;
 
 /**
  * The contribution of a Party in the scope of the creation or the modification of a news object.
@@ -33,6 +34,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ContributionType")
+@ToString
 public class ContributionType {
 
     @XmlAttribute(name = "Duid")

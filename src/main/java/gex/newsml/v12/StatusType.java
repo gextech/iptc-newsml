@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import lombok.ToString;
 
 /**
  * An indication of the Status of a NewsItem. The value of the FormalName attribute is a formal name for the Status. Its meaning and permitted values are determined by a controlled vocabulary as described in the comment to the formalname attribute group declaration above.
@@ -33,6 +34,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StatusType")
+@ToString
 public class StatusType {
 
     @XmlAttribute(name = "Duid")

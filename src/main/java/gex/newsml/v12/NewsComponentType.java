@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3c.dom.Element;
 
+import lombok.ToString;
 
 /**
  * A container for news objects, used to identify the role of news objects in relation to one another, and to ascribe metadata to them. The Essential attribute indicates whether the provider considers that this NewsComponent is essential to the meaning of the NewsComponent within which it is contained. The EquivalentsList attribute indicates whether or not the NewsItems or NewsItemRefs, NewsComponents or ContentItems contained within this one are equivalent to one another in content and/or meaning
@@ -794,6 +795,7 @@ import org.w3c.dom.Element;
     "newsComponent",
     "contentItem"
 })
+@ToString
 public class NewsComponentType {
 
     @XmlElement(name = "Comment")
@@ -1421,6 +1423,7 @@ public class NewsComponentType {
         "contributor",
         "property"
     })
+		@ToString
     public static class AdministrativeMetadata {
 
         @XmlElement(name = "Catalog")
@@ -1735,6 +1738,7 @@ public class NewsComponentType {
             "party",
             "contribution"
         })
+				@ToString
         public static class Contributor {
 
             @XmlElement(name = "Comment")
@@ -1913,6 +1917,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "property"
             })
+						@ToString
             public static class Party {
 
                 @XmlElement(name = "Property")
@@ -2138,6 +2143,7 @@ public class NewsComponentType {
             "party",
             "contribution"
         })
+				@ToString
         public static class Creator {
 
             @XmlElement(name = "Comment")
@@ -2313,6 +2319,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "value"
         })
+				@ToString
         public static class FileName {
 
             @XmlValue
@@ -2425,6 +2432,7 @@ public class NewsComponentType {
             "comment",
             "party"
         })
+				@ToString
         public static class Provider {
 
             @XmlElement(name = "Comment")
@@ -2574,6 +2582,7 @@ public class NewsComponentType {
             "comment",
             "party"
         })
+				@ToString
         public static class Source {
 
             @XmlElement(name = "Comment")
@@ -2744,6 +2753,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "value"
         })
+				@ToString
         public static class SystemIdentifier {
 
             @XmlValue
@@ -2855,6 +2865,7 @@ public class NewsComponentType {
     @XmlType(name = "", propOrder = {
         "value"
     })
+		@ToString
     public static class BasisForChoice {
 
         @XmlValue
@@ -3065,6 +3076,7 @@ public class NewsComponentType {
         "encoding",
         "dataContent"
     })
+		@ToString
     public static class ContentItem {
 
         @XmlElement(name = "Comment")
@@ -3423,6 +3435,7 @@ public class NewsComponentType {
             "sizeInBytes",
             "property"
         })
+				@ToString
         public static class Characteristics {
 
             @XmlElement(name = "SizeInBytes")
@@ -3560,6 +3573,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "value"
             })
+						@ToString
             public static class SizeInBytes {
 
                 @XmlValue
@@ -3674,6 +3688,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class DataContent {
 
             @XmlMixed
@@ -3795,6 +3810,7 @@ public class NewsComponentType {
             "encoding",
             "dataContent"
         })
+				@ToString
         public static class Encoding {
 
             @XmlElement(name = "Encoding")
@@ -3954,6 +3970,7 @@ public class NewsComponentType {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class Format {
 
             @XmlAttribute(name = "Duid")
@@ -4113,6 +4130,7 @@ public class NewsComponentType {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class MediaType {
 
             @XmlAttribute(name = "FormalName", required = true)
@@ -4272,6 +4290,7 @@ public class NewsComponentType {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class MimeType {
 
             @XmlAttribute(name = "FormalName", required = true)
@@ -4431,6 +4450,7 @@ public class NewsComponentType {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class Notation {
 
             @XmlAttribute(name = "FormalName", required = true)
@@ -4745,6 +4765,7 @@ public class NewsComponentType {
         "topicOccurrence",
         "property"
     })
+		@ToString
     public static class DescriptiveMetadata {
 
         @XmlElement(name = "Catalog")
@@ -5224,6 +5245,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "value"
         })
+				@ToString
         public static class DateLineDate {
 
             @XmlValue
@@ -5332,6 +5354,7 @@ public class NewsComponentType {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class Genre {
 
             @XmlAttribute(name = "Duid")
@@ -5622,6 +5645,7 @@ public class NewsComponentType {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class Language {
 
             @XmlAttribute(name = "AssignedBy")
@@ -5918,6 +5942,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "property"
         })
+				@ToString
         public static class Location {
 
             @XmlElement(name = "Property")
@@ -6230,6 +6255,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "relevance"
         })
+				@ToString
         public static class OfInterestTo {
 
             @XmlElement(name = "Relevance")
@@ -6544,6 +6570,7 @@ public class NewsComponentType {
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
+						@ToString
             public static class Relevance {
 
                 @XmlAttribute(name = "Duid")
@@ -6885,6 +6912,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "subjectOrSubjectMatterOrSubjectDetail"
         })
+				@ToString
         public static class SubjectCode {
 
             @XmlElements({
@@ -7134,6 +7162,7 @@ public class NewsComponentType {
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
+						@ToString
             public static class Subject {
 
                 @XmlAttribute(name = "Duid")
@@ -7424,6 +7453,7 @@ public class NewsComponentType {
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
+						@ToString
             public static class SubjectDetail {
 
                 @XmlAttribute(name = "AssignedBy")
@@ -7714,6 +7744,7 @@ public class NewsComponentType {
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
+						@ToString
             public static class SubjectMatter {
 
                 @XmlAttribute(name = "AssignedBy")
@@ -8004,6 +8035,7 @@ public class NewsComponentType {
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
+						@ToString
             public static class SubjectQualifier {
 
                 @XmlAttribute(name = "Duid")
@@ -8296,6 +8328,7 @@ public class NewsComponentType {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class TopicOccurrence {
 
             @XmlAttribute(name = "Topic")
@@ -8552,6 +8585,7 @@ public class NewsComponentType {
         "metadataType",
         "property"
     })
+		@ToString
     public static class Metadata {
 
         @XmlElement(name = "Catalog")
@@ -8714,6 +8748,7 @@ public class NewsComponentType {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class MetadataType {
 
             @XmlAttribute(name = "FormalName", required = true)
@@ -8880,6 +8915,7 @@ public class NewsComponentType {
     @XmlType(name = "", propOrder = {
         "comment"
     })
+		@ToString
     public static class NewsItemRef {
 
         @XmlElement(name = "Comment")
@@ -9202,6 +9238,7 @@ public class NewsComponentType {
     @XmlType(name = "", propOrder = {
         "headLineAndSubHeadLineOrByLine"
     })
+		@ToString
     public static class NewsLines {
 
         @XmlElements({
@@ -9341,6 +9378,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class ByLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -9488,6 +9526,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class ByLineTitle {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -9635,6 +9674,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class CopyrightLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -9782,6 +9822,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class CreditLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -9929,6 +9970,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class DateLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -10076,6 +10118,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class HeadLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -10223,6 +10266,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class KeywordLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -10392,6 +10436,7 @@ public class NewsComponentType {
             "newsLineType",
             "newsLineText"
         })
+				@ToString
         public static class NewsLine {
 
             @XmlElement(name = "NewsLineType", required = true)
@@ -10533,6 +10578,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "content"
             })
+						@ToString
             public static class NewsLineText {
 
                 @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -10675,6 +10721,7 @@ public class NewsComponentType {
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
+						@ToString
             public static class NewsLineType {
 
                 @XmlAttribute(name = "FormalName", required = true)
@@ -10841,6 +10888,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class RightsLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -10988,6 +11036,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class SeriesLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -11135,6 +11184,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class SlugLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -11282,6 +11332,7 @@ public class NewsComponentType {
         @XmlType(name = "", propOrder = {
             "content"
         })
+				@ToString
         public static class SubHeadLine {
 
             @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -11570,6 +11621,7 @@ public class NewsComponentType {
         "usageRights",
         "property"
     })
+		@ToString
     public static class RightsMetadata {
 
         @XmlElement(name = "Catalog")
@@ -11931,6 +11983,7 @@ public class NewsComponentType {
             "copyrightHolder",
             "copyrightDate"
         })
+				@ToString
         public static class Copyright {
 
             @XmlElement(name = "Comment")
@@ -12228,6 +12281,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "content"
             })
+						@ToString
             public static class CopyrightDate {
 
                 @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -12375,6 +12429,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "content"
             })
+						@ToString
             public static class CopyrightHolder {
 
                 @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -12612,6 +12667,7 @@ public class NewsComponentType {
             "startDate",
             "endDate"
         })
+				@ToString
         public static class UsageRights {
 
             @XmlElement(name = "UsageType")
@@ -12983,6 +13039,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "content"
             })
+						@ToString
             public static class EndDate {
 
                 @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -13261,6 +13318,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "content"
             })
+						@ToString
             public static class Geography {
 
                 @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -13539,6 +13597,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "content"
             })
+						@ToString
             public static class Limitations {
 
                 @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -13817,6 +13876,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "content"
             })
+						@ToString
             public static class RightsHolder {
 
                 @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -14095,6 +14155,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "content"
             })
+						@ToString
             public static class StartDate {
 
                 @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -14373,6 +14434,7 @@ public class NewsComponentType {
             @XmlType(name = "", propOrder = {
                 "content"
             })
+						@ToString
             public static class UsageType {
 
                 @XmlElementRef(name = "Origin", namespace = "http://iptc.org/std/NewsML/2003-10-10/", type = JAXBElement.class, required = false)
@@ -14649,6 +14711,7 @@ public class NewsComponentType {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
+		@ToString
     public static class Role {
 
         @XmlAttribute(name = "FormalName", required = true)

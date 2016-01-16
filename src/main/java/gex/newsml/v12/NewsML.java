@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import lombok.ToString;
+
 
 /**
  * <p>Java class for anonymous complex type.
@@ -131,6 +133,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "newsItem"
 })
 @XmlRootElement(name = "NewsML")
+@ToString
 public class NewsML {
 
     @XmlElement(name = "Catalog")
@@ -424,6 +427,7 @@ public class NewsML {
         "newsProduct",
         "priority"
     })
+		@ToString
     public static class NewsEnvelope {
 
         @XmlElement(name = "TransmissionId")
@@ -695,6 +699,7 @@ public class NewsML {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class NewsProduct {
 
             @XmlAttribute(name = "Duid")
@@ -854,6 +859,7 @@ public class NewsML {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class NewsService {
 
             @XmlAttribute(name = "Duid")
@@ -1013,6 +1019,7 @@ public class NewsML {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class Priority {
 
             @XmlAttribute(name = "Duid")
@@ -1177,6 +1184,7 @@ public class NewsML {
             "comment",
             "party"
         })
+				@ToString
         public static class SentFrom {
 
             @XmlElement(name = "Comment")
@@ -1325,6 +1333,7 @@ public class NewsML {
             "comment",
             "party"
         })
+				@ToString
         public static class SentTo {
 
             @XmlElement(name = "Comment")
@@ -1470,6 +1479,7 @@ public class NewsML {
         @XmlType(name = "", propOrder = {
             "value"
         })
+				@ToString
         public static class TransmissionId {
 
             @XmlValue

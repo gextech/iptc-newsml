@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3c.dom.Element;
 
+import lombok.ToString;
 
 /**
  * A managed set of information representing a point of view, at a given time, on some event or events. Its Identification and NewsManagement provide manageability. It may contain either a NewsComponent, or one or more Updates that modify aspects of a previous Revision of the same NewsItem, or a TopicSet. 
@@ -365,6 +366,7 @@ import org.w3c.dom.Element;
     "update",
     "topicSet"
 })
+@ToString
 public class NewsItemType {
 
     @XmlElement(name = "Comment")

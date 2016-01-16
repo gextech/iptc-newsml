@@ -14,6 +14,7 @@ import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import lombok.ToString;
 
 /**
  * A container for Topics. The value of the FormalName attribute is a formal name for the TopicSet. Its meaning and permitted values are determined by a controlled vocabulary as described in the comment to the formalname attribute group declaration above.
@@ -105,6 +106,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "topicSetRef",
     "topic"
 })
+@ToString
 public class TopicSetType {
 
     @XmlElement(name = "Comment")

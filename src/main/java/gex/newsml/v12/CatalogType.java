@@ -14,6 +14,8 @@ import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import lombok.ToString;
+
 
 /**
  * A container for Resource and TopicUse elements. Resource elements map URNs to URLs and indicate default vocabularies which apply to the formal names of certain elements within the subtree that begins with the immediate parent of the Catalog element. TopicUse elements indicate where in the NewsML document certain Topics are used. The optional Href attribute provides a pointer to a Catalog element elsewhere in this or another document. Its value consists of a # character followed by the value of the Duid attribute of the referenced Catalog element and preceded, if the referenced Catalog is not in the current document, by an http URL or a NewsML URN identifying the document or NewsItem in which the Catalog appears. If the Href attribute is present on a Catalog element, then that element should be empty. If it contains subelements, the NewsML system may signal an error.
@@ -92,6 +94,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "resource",
     "topicUse"
 })
+@ToString
 public class CatalogType {
 
     @XmlElement(name = "Resource")
@@ -293,6 +296,7 @@ public class CatalogType {
         "url",
         "defaultVocabularyFor"
     })
+		@ToString
     public static class Resource {
 
         @XmlElement(name = "Urn")
@@ -461,6 +465,7 @@ public class CatalogType {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
+				@ToString
         public static class DefaultVocabularyFor {
 
             @XmlAttribute(name = "Context", required = true)
@@ -595,6 +600,7 @@ public class CatalogType {
         @XmlType(name = "", propOrder = {
             "value"
         })
+				@ToString
         public static class Url {
 
             @XmlValue
@@ -703,6 +709,7 @@ public class CatalogType {
         @XmlType(name = "", propOrder = {
             "value"
         })
+				@ToString
         public static class Urn {
 
             @XmlValue
@@ -812,6 +819,7 @@ public class CatalogType {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
+		@ToString
     public static class TopicUse {
 
         @XmlAttribute(name = "Topic", required = true)
