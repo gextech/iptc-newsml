@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+SUMMARY: 
+- Structure: NML2 NEP External 
+- Based On: NML2 v2.10
+
+AUTHOR: thomsonreuters.com
+-->
+<!-- ========================================================= -->
+<newsMessage xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rtr="http://www.reuters.com/ns/2003/08/content" xmlns:x="http://www.w3.org/1999/xhtml">
+  <header>
+    <sent>2016-01-02T19:03:39.000Z</sent>
+    <sender>reuters.com</sender>
+    <transmitId>LWN_2016-01-02_28031</transmitId>
+    <priority>3</priority>
+    <destination>REYE</destination>
+    <destination>RMON</destination>
+    <channel>VID</channel>
+  </header>
+  <itemSet>
+    <packageItem guid="tag:reuters.com,2016:newsml_WN3YCW1TX" version="2" standard="NewsML-G2" standardversion="2.10" conformance="power" xml:lang="en">
+      <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_3.xml" />
+      <rightsInfo>
+        <copyrightHolder literal="Thomson Reuters" />
+        <copyrightNotice xml:lang="en">(c) Copyright Thomson Reuters 2016. Open For Restrictions - http://about.reuters.com/fulllegal.asp</copyrightNotice>
+        <usageTerms xml:lang="en">Broadcasters: NONE Digital: NONE For Reuters customers only. No use/digital display after 01/Feb/2016 19:04</usageTerms>
+        <usageTerms role="usageRole:content" xml:lang="en">Broadcast</usageTerms>
+      </rightsInfo>
+      <itemMeta>
+        <itemClass qcode="icls:composite" />
+        <provider literal="reuters.com" />
+        <versionCreated>2016-01-02T19:04:03.000Z</versionCreated>
+        <firstCreated>2016-01-02T19:03:54.000Z</firstCreated>
+        <pubStatus qcode="stat:usable" />
+        <role qcode="itemRole:N" />
+        <fileName>201601026085EY-MIDEAST-CRISISSYRIA_FIGHTERS.xml</fileName>
+        <generator versioninfo="4.12.0">RVN Script Server</generator>
+        <profile versioninfo="00.00.01">NEP-External_MNP</profile>
+        <service qcode="svc:RTR_VID" />
+        <signal qcode="prodId:VID" />
+        <signal qcode="sic:ATOMIC" />
+        <signal qcode="sar:widescreen">
+          <name>Native widescreen 16:9</name>
+        </signal>
+        <signal qcode="svd:HD" />
+        <signal qcode="sic:NORC" />
+        <signal qcode="edStat:U" />
+        <signal qcode="var:itemEvol" />
+        <signal qcode="pmt:video" />
+        <link rel="irel:prevVersion" residref="tag:reuters.com,2016:newsml_WN3YCW1TX" version="1" contenttype="application/vnd.iptc.g2.packageitem+xml" rtr:id="WN3YCW1TX" rtr:type="idType:USN" />
+        <link rel="irel:evolvedFrom" residref="tag:reuters.com,2016:newsml_WN3YCW1MV" version="1" contenttype="application/vnd.iptc.g2.packageitem+xml" rtr:id="WN3YCW1MV" rtr:type="idType:USN" />
+        <rtr:versionedId guid="tag:reuters.com,2016:newsml_WN3YCW1TX:2" />
+      </itemMeta>
+      <contentMeta>
+        <urgency>3</urgency>
+        <located literal="SAID TO BE DERAA, SYRIA" xml:lang="en">
+          <name xml:lang="en">SAID TO BE DERAA, SYRIA</name>
+        </located>
+        <infoSource role="cRole:origProv" literal="Reuters" />
+        <infoSource role="cRole:source" literal="Reuters" />
+        <creator literal="Reuters" />
+        <contributor role="cRole:lastEd" literal="chaudhry" />
+        <exclAudience qcode="audMedia:RCV6" />
+        <altId type="idType:USN" rtr:isOriginal="1">WN3YCW1TX</altId>
+        <altId type="idType:editNumber">6085</altId>
+        <altId type="idType:itemId">tag:reuters.com,2016:newsml_WN3YCW1TX:2</altId>
+        <language tag="en" />
+        <genre literal="Current or spot news">
+          <name>Current or spot news</name>
+        </genre>
+        <subject qcode="rvnServiceCode:EY">
+          <name>Eyewitness</name>
+        </subject>
+        <subject qcode="WNSFR:WORLD,~~EYEWITNESS,~~eurovision" />
+        <subject qcode="ISLC:No-Data-Available" />
+        <subject qcode="tvsc:No-Data-Available" />
+        <slugline xml:lang="en" separator="-">MIDEAST-CRISIS/SYRIA FIGHTERS</slugline>
+        <headline xml:lang="en">Syrian rebels battle government forces in Deraa -amateur video</headline>
+        <dateline>SAID TO BE DECEMBER 31, 2015</dateline>
+        <by xml:lang="en">Reuters, JAN 02</by>
+        <description role="descRole:videoCaption" xml:lang="en">6085EY-MIDEAST-CRISIS_SYRIA_FIGHTERS</description>
+      </contentMeta>
+      <groupSet root="root">
+        <group role="grpRole:NEP" id="root">
+          <groupRef idref="main" />
+        </group>
+        <group role="grpRole:Main" id="main">
+          <itemRef residref="tag:reuters.com,2016:newsml_WN3YCW1TW" contenttype="application/vnd.iptc.g2.newsitem+xml">
+            <provider literal="reuters.com" />
+            <pubStatus qcode="stat:usable" />
+            <role qcode="itemRole:N" />
+          </itemRef>
+          <itemRef residref="tag:reuters.com,2016:newsml_LWN000ZIUOX8N" contenttype="application/vnd.iptc.g2.newsitem+xml">
+            <provider literal="reuters.com" />
+            <pubStatus qcode="stat:usable" />
+            <role qcode="itemRole:N" />
+          </itemRef>
+        </group>
+      </groupSet>
+    </packageItem>
+    <newsItem guid="tag:reuters.com,2016:newsml_WN3YCW1TW" version="2" standard="NewsML-G2" standardversion="2.10" conformance="power" xml:lang="en">
+      <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_3.xml" />
+      <rightsInfo>
+        <copyrightHolder literal="Thomson Reuters" />
+        <copyrightNotice xml:lang="en">(c) Copyright Thomson Reuters 2016. Open For Restrictions - http://about.reuters.com/fulllegal.asp</copyrightNotice>
+      </rightsInfo>
+      <itemMeta>
+        <itemClass qcode="icls:text" />
+        <provider literal="reuters.com" />
+        <versionCreated>2016-01-02T19:03:39.000Z</versionCreated>
+        <firstCreated>2016-01-02T19:03:39.000Z</firstCreated>
+        <pubStatus qcode="stat:usable" />
+        <role qcode="itemRole:N" />
+        <fileName>201601026085EY-MIDEAST-CRISISSYRIA_FIGHTERS.xml</fileName>
+        <profile versioninfo="00.00.01">SNI-Text</profile>
+        <signal qcode="edStat:U" />
+        <signal qcode="var:itemEvol" />
+        <link rel="irel:prevVersion" residref="tag:reuters.com,2016:newsml_WN3YCW1TW" version="1" contenttype="application/vnd.iptc.g2.packageitem+xml" rtr:id="WN3YCW1TW" rtr:type="idType:USN" />
+        <link rel="irel:evolvedFrom" residref="tag:reuters.com,2016:newsml_WN3YCW1MU" version="1" contenttype="application/vnd.iptc.g2.packageitem+xml" rtr:id="WN3YCW1MU" rtr:type="idType:USN" />
+        <rtr:versionedId guid="tag:reuters.com,2016:newsml_WN3YCW1TW:2" />
+      </itemMeta>
+      <contentMeta>
+        <urgency>3</urgency>
+        <located literal="SAID TO BE DERAA, SYRIA" xml:lang="en">
+          <name xml:lang="en">SAID TO BE DERAA, SYRIA</name>
+        </located>
+        <infoSource role="cRole:origProv" literal="Reuters" />
+        <infoSource role="cRole:source" literal="Reuters" />
+        <creator literal="Reuters" />
+        <altId type="idType:USN" rtr:isOriginal="1">WN3YCW1TW</altId>
+        <altId type="idType:fileOrig">335d0faf</altId>
+        <altId type="idType:itemId">tag:reuters.com,2016:newsml_WN3YCW1TW:2</altId>
+        <language tag="en" />
+        <slugline xml:lang="en" separator="-">MIDEAST-CRISIS/SYRIA FIGHTERS</slugline>
+        <headline xml:lang="en">Syrian rebels battle government forces in Deraa -amateur video</headline>
+        <dateline>SAID TO BE DECEMBER 31, 2015</dateline>
+        <by xml:lang="en">Reuters, JAN 02</by>
+        <description role="descRole:intro" xml:lang="en" />
+        <description role="descRole:moreInfo" xml:lang="en" />
+      </contentMeta>
+      <contentSet>
+        <inlineXML xml:lang="en" contenttype="application/xhtml+xml" wordcount="74">
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title />
+            </head>
+            <body>
+              <p>THIS EDIT CONTAINS USER GENERATED CONTENT THAT WAS UPLOADED TO A SOCIAL MEDIA WEBSITE. IT HAS BEEN CHECKED BY REUTERS' SOCIAL MEDIA TEAM AND REVIEWED BY A SENIOR EDITOR. REUTERS IS CONFIDENT THE EVENTS PORTRAYED ARE GENUINE</p>
+              <p>Amateur video uploaded to the Internet purports to show fighters associated with the Free Syrian Army repelling an offensive against government forces in the fight for control of the Syrian city of Deraa.</p>
+              <p>FULL SCRIPT TO FOLLOW</p>
+            </body>
+          </html>
+        </inlineXML>
+      </contentSet>
+    </newsItem>
+    <newsItem guid="tag:reuters.com,2016:newsml_LWN000ZIUOX8N" version="1" standard="NewsML-G2" standardversion="2.10" conformance="power" xml:lang="en">
+      <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_3.xml" />
+      <rightsInfo>
+        <copyrightHolder literal="Thomson Reuters" />
+        <copyrightNotice xml:lang="en">(c) Copyright Thomson Reuters 2016. Open For Restrictions - http://about.reuters.com/fulllegal.asp</copyrightNotice>
+      </rightsInfo>
+      <itemMeta>
+        <itemClass qcode="icls:video" />
+        <provider literal="reuters.com" />
+        <versionCreated>2016-01-02T19:03:39.000Z</versionCreated>
+        <firstCreated>2016-01-02T19:03:52.000Z</firstCreated>
+        <pubStatus qcode="stat:usable" />
+        <role qcode="itemRole:N" />
+        <fileName>2016-01-02T190339Z_1_LWN000ZIUOX8N_RTRMADV_0_NODESC.XML</fileName>
+        <profile versioninfo="00.00.01">SNI-Video</profile>
+        <rtr:versionedId guid="tag:reuters.com,2016:newsml_LWN000ZIUOX8N:1" />
+      </itemMeta>
+      <contentMeta>
+        <urgency>3</urgency>
+        <infoSource role="cRole:origProv" literal="Reuters" />
+        <infoSource role="cRole:source" literal="SOCIAL MEDIA WEBSITE" />
+        <creator literal="Reuters" />
+        <altId type="idType:SID" rtr:isOriginal="1">LWN000ZIUOX8N</altId>
+        <altId type="idType:itemId">tag:reuters.com,2016:newsml_LWN000ZIUOX8N:1</altId>
+        <language tag="en" />
+        <by xml:lang="en">SOCIAL MEDIA WEBSITE, JAN 02</by>
+        <description role="descRole:audio" xml:lang="en">NATURAL WITH ARABIC NARRATION</description>
+      </contentMeta>
+      <partMeta>
+        <timeDelim start="00:00:00.000" end="00:00:05.000" timeunit="timeunit:normalPlayTime" />
+        <rtr:role qcode="partRole:slate" />
+      </partMeta>
+      <partMeta>
+        <timeDelim start="00:00:05.000" end="00:06:32.000" timeunit="timeunit:normalPlayTime" />
+        <rtr:role qcode="partRole:content" />
+      </partMeta>
+      <partMeta>
+        <timeDelim start="00:00:10.000" end="00:00:11.000" timeunit="timeunit:normalPlayTime" />
+        <rtr:role qcode="partRole:keyframe" />
+      </partMeta>
+      <contentSet>
+        <remoteContent residref="tag:reuters.com,2016:binary_LWN000ZIUOX8N-STREAM:4500:MPG" rendition="rend:stream:6756:mpg" contenttype="video/mpeg" format="fmt:mpeg" duration="387" audiocodec="codec:mpegLayer2" audiobitrate="256000" audiosamplesize="16" audiosamplerate="48000" videocodec="UNK:mpeg2mp@ml" videoavgbitrate="6500000" videoscan="interlaced" videoaspectratio="16:9" videosampling="4:2:0" rtr:definition="videoDef:SD" audiovbr="false" videovbr="false">
+          <rtr:altId type="idType:fileBIN" contentType="video/mpeg" isPresent="1">201601026085WD-MIDEAST-CRISISSYRIA_FIGHTERS.mpg</rtr:altId>
+        </remoteContent>
+      </contentSet>
+    </newsItem>
+  </itemSet>
+</newsMessage>
+

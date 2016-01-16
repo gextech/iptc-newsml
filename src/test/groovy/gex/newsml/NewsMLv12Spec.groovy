@@ -8,7 +8,7 @@ import spock.lang.*
 import javax.xml.bind.*
 import javax.xml.transform.stream.*
 
-class JaxbSpec extends Specification {
+class NewsMLv12Spec extends Specification {
 
   @Unroll
   def 'We can parse #file'() {
