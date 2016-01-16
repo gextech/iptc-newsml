@@ -3,19 +3,21 @@ package gex.newsml.g2;
 
 import lombok.ToString;
 
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * An expression of rights in natural language or as a reference to remote information
+ * An expression of rights in natural language or as a reference to remote
+ * information
  * 
- * <p>Java class for RightsBlockType complex type.
+ * <p>
+ * Java class for RightsBlockType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="RightsBlockType">
@@ -32,35 +34,31 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RightsBlockType")
-@ToString public class RightsBlockType
-    extends BlockType
-{
+@ToString
+public class RightsBlockType extends BlockType {
 
-    @XmlAttribute(name = "href")
-    protected String href;
+	@XmlAttribute(name = "href")
+	protected String href;
 
-    /**
-     * Gets the value of the href property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getHref() {
-        return href;
-    }
+	/**
+	 * Gets the value of the href property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getHref() {
+		return href;
+	}
 
-    /**
-     * Sets the value of the href property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setHref(String value) {
-        this.href = value;
-    }
+	/**
+	 * Sets the value of the href property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setHref(String value) {
+		this.href = value;
+	}
 
 }

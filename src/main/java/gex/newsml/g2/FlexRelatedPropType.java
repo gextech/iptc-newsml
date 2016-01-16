@@ -3,19 +3,21 @@ package gex.newsml.g2;
 
 import lombok.ToString;
 
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * Flexible generic type for both controlled and uncontrolled values of a related concept
+ * Flexible generic type for both controlled and uncontrolled values of a
+ * related concept
  * 
- * <p>Java class for FlexRelatedPropType complex type.
+ * <p>
+ * Java class for FlexRelatedPropType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="FlexRelatedPropType">
@@ -33,61 +35,54 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FlexRelatedPropType")
-@ToString public class FlexRelatedPropType
-    extends FlexProp2Type
-{
+@ToString
+public class FlexRelatedPropType extends FlexProp2Type {
 
-    @XmlAttribute(name = "rel")
-    protected String rel;
-    @XmlAttribute(name = "reluri")
-    protected String reluri;
+	@XmlAttribute(name = "rel")
+	protected String rel;
+	@XmlAttribute(name = "reluri")
+	protected String reluri;
 
-    /**
-     * Gets the value of the rel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getRel() {
-        return rel;
-    }
+	/**
+	 * Gets the value of the rel property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getRel() {
+		return rel;
+	}
 
-    /**
-     * Sets the value of the rel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRel(String value) {
-        this.rel = value;
-    }
+	/**
+	 * Sets the value of the rel property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setRel(String value) {
+		this.rel = value;
+	}
 
-    /**
-     * Gets the value of the reluri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getReluri() {
-        return reluri;
-    }
+	/**
+	 * Gets the value of the reluri property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getReluri() {
+		return reluri;
+	}
 
-    /**
-     * Sets the value of the reluri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setReluri(String value) {
-        this.reluri = value;
-    }
+	/**
+	 * Sets the value of the reluri property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setReluri(String value) {
+		this.reluri = value;
+	}
 
 }

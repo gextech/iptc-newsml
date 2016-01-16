@@ -3,7 +3,6 @@ package gex.newsml.g2;
 
 import lombok.ToString;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,11 +23,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
-
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -59,516 +60,472 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "sameAsSchemeOrNameOrDefinition",
-    "any"
-})
+@XmlType(name = "", propOrder = { "sameAsSchemeOrNameOrDefinition", "any" })
 @XmlRootElement(name = "schemeMeta")
-@ToString public class SchemeMeta {
+@ToString
+public class SchemeMeta {
 
-    @XmlElements({
-        @XmlElement(name = "sameAsScheme", type = SameAsScheme.class),
-        @XmlElement(name = "name", type = ConceptNameType.class),
-        @XmlElement(name = "definition", type = Definition.class),
-        @XmlElement(name = "note", type = Note.class),
-        @XmlElement(name = "related", type = FlexRelatedConceptType.class),
-        @XmlElement(name = "schemeMetaExtProperty", type = Flex2ExtPropType.class)
-    })
-    protected List<Object> sameAsSchemeOrNameOrDefinition;
-    @XmlAnyElement(lax = true)
-    protected List<Object> any;
-    @XmlAttribute(name = "uri", required = true)
-    protected String uri;
-    @XmlAttribute(name = "preferredalias")
-    @XmlSchemaType(name = "anySimpleType")
-    protected String preferredalias;
-    @XmlAttribute(name = "authority")
-    protected String authority;
-    @XmlAttribute(name = "concepttype")
-    protected List<String> concepttype;
-    @XmlAttribute(name = "id")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
-    protected String id;
-    @XmlAttribute(name = "creator")
-    protected String creator;
-    @XmlAttribute(name = "creatoruri")
-    protected String creatoruri;
-    @XmlAttribute(name = "modified")
-    protected String modified;
-    @XmlAttribute(name = "custom")
-    protected Boolean custom;
-    @XmlAttribute(name = "how")
-    protected String how;
-    @XmlAttribute(name = "howuri")
-    protected String howuri;
-    @XmlAttribute(name = "why")
-    protected String why;
-    @XmlAttribute(name = "whyuri")
-    protected String whyuri;
-    @XmlAttribute(name = "pubconstraint")
-    protected List<String> pubconstraint;
-    @XmlAttribute(name = "pubconstrainturi")
-    protected List<String> pubconstrainturi;
-    @XmlAnyAttribute
-    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+	@XmlElements({ @XmlElement(name = "sameAsScheme", type = SameAsScheme.class),
+			@XmlElement(name = "name", type = ConceptNameType.class),
+			@XmlElement(name = "definition", type = Definition.class), @XmlElement(name = "note", type = Note.class),
+			@XmlElement(name = "related", type = FlexRelatedConceptType.class),
+			@XmlElement(name = "schemeMetaExtProperty", type = Flex2ExtPropType.class) })
+	protected List<Object> sameAsSchemeOrNameOrDefinition;
+	@XmlAnyElement(lax = true)
+	protected List<Object> any;
+	@XmlAttribute(name = "uri", required = true)
+	protected String uri;
+	@XmlAttribute(name = "preferredalias")
+	@XmlSchemaType(name = "anySimpleType")
+	protected String preferredalias;
+	@XmlAttribute(name = "authority")
+	protected String authority;
+	@XmlAttribute(name = "concepttype")
+	protected List<String> concepttype;
+	@XmlAttribute(name = "id")
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	@XmlID
+	@XmlSchemaType(name = "ID")
+	protected String id;
+	@XmlAttribute(name = "creator")
+	protected String creator;
+	@XmlAttribute(name = "creatoruri")
+	protected String creatoruri;
+	@XmlAttribute(name = "modified")
+	protected String modified;
+	@XmlAttribute(name = "custom")
+	protected Boolean custom;
+	@XmlAttribute(name = "how")
+	protected String how;
+	@XmlAttribute(name = "howuri")
+	protected String howuri;
+	@XmlAttribute(name = "why")
+	protected String why;
+	@XmlAttribute(name = "whyuri")
+	protected String whyuri;
+	@XmlAttribute(name = "pubconstraint")
+	protected List<String> pubconstraint;
+	@XmlAttribute(name = "pubconstrainturi")
+	protected List<String> pubconstrainturi;
+	@XmlAnyAttribute
+	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-    /**
-     * Gets the value of the sameAsSchemeOrNameOrDefinition property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the sameAsSchemeOrNameOrDefinition property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getSameAsSchemeOrNameOrDefinition().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link SameAsScheme }
-     * {@link ConceptNameType }
-     * {@link Definition }
-     * {@link Note }
-     * {@link FlexRelatedConceptType }
-     * {@link Flex2ExtPropType }
-     * 
-     * 
-     */
-    public List<Object> getSameAsSchemeOrNameOrDefinition() {
-        if (sameAsSchemeOrNameOrDefinition == null) {
-            sameAsSchemeOrNameOrDefinition = new ArrayList<Object>();
-        }
-        return this.sameAsSchemeOrNameOrDefinition;
-    }
+	/**
+	 * Gets the value of the sameAsSchemeOrNameOrDefinition property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the sameAsSchemeOrNameOrDefinition property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getSameAsSchemeOrNameOrDefinition().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link SameAsScheme } {@link ConceptNameType } {@link Definition }
+	 * {@link Note } {@link FlexRelatedConceptType } {@link Flex2ExtPropType }
+	 * 
+	 * 
+	 */
+	public List<Object> getSameAsSchemeOrNameOrDefinition() {
+		if (sameAsSchemeOrNameOrDefinition == null) {
+			sameAsSchemeOrNameOrDefinition = new ArrayList<Object>();
+		}
+		return this.sameAsSchemeOrNameOrDefinition;
+	}
 
-    /**
-     * Gets the value of the any property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the any property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAny().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Object }
-     * {@link Element }
-     * 
-     * 
-     */
-    public List<Object> getAny() {
-        if (any == null) {
-            any = new ArrayList<Object>();
-        }
-        return this.any;
-    }
+	/**
+	 * Gets the value of the any property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the any property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAny().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link Object }
+	 * {@link Element }
+	 * 
+	 * 
+	 */
+	public List<Object> getAny() {
+		if (any == null) {
+			any = new ArrayList<Object>();
+		}
+		return this.any;
+	}
 
-    /**
-     * Gets the value of the uri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getUri() {
-        return uri;
-    }
+	/**
+	 * Gets the value of the uri property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getUri() {
+		return uri;
+	}
 
-    /**
-     * Sets the value of the uri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setUri(String value) {
-        this.uri = value;
-    }
+	/**
+	 * Sets the value of the uri property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setUri(String value) {
+		this.uri = value;
+	}
 
-    /**
-     * Gets the value of the preferredalias property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPreferredalias() {
-        return preferredalias;
-    }
+	/**
+	 * Gets the value of the preferredalias property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getPreferredalias() {
+		return preferredalias;
+	}
 
-    /**
-     * Sets the value of the preferredalias property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPreferredalias(String value) {
-        this.preferredalias = value;
-    }
+	/**
+	 * Sets the value of the preferredalias property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setPreferredalias(String value) {
+		this.preferredalias = value;
+	}
 
-    /**
-     * Gets the value of the authority property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAuthority() {
-        return authority;
-    }
+	/**
+	 * Gets the value of the authority property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getAuthority() {
+		return authority;
+	}
 
-    /**
-     * Sets the value of the authority property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAuthority(String value) {
-        this.authority = value;
-    }
+	/**
+	 * Sets the value of the authority property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setAuthority(String value) {
+		this.authority = value;
+	}
 
-    /**
-     * Gets the value of the concepttype property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the concepttype property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getConcepttype().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getConcepttype() {
-        if (concepttype == null) {
-            concepttype = new ArrayList<String>();
-        }
-        return this.concepttype;
-    }
+	/**
+	 * Gets the value of the concepttype property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the concepttype property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getConcepttype().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link String }
+	 * 
+	 * 
+	 */
+	public List<String> getConcepttype() {
+		if (concepttype == null) {
+			concepttype = new ArrayList<String>();
+		}
+		return this.concepttype;
+	}
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setId(String value) {
+		this.id = value;
+	}
 
-    /**
-     * Gets the value of the creator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCreator() {
-        return creator;
-    }
+	/**
+	 * Gets the value of the creator property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCreator() {
+		return creator;
+	}
 
-    /**
-     * Sets the value of the creator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCreator(String value) {
-        this.creator = value;
-    }
+	/**
+	 * Sets the value of the creator property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setCreator(String value) {
+		this.creator = value;
+	}
 
-    /**
-     * Gets the value of the creatoruri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCreatoruri() {
-        return creatoruri;
-    }
+	/**
+	 * Gets the value of the creatoruri property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCreatoruri() {
+		return creatoruri;
+	}
 
-    /**
-     * Sets the value of the creatoruri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCreatoruri(String value) {
-        this.creatoruri = value;
-    }
+	/**
+	 * Sets the value of the creatoruri property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setCreatoruri(String value) {
+		this.creatoruri = value;
+	}
 
-    /**
-     * Gets the value of the modified property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getModified() {
-        return modified;
-    }
+	/**
+	 * Gets the value of the modified property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getModified() {
+		return modified;
+	}
 
-    /**
-     * Sets the value of the modified property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setModified(String value) {
-        this.modified = value;
-    }
+	/**
+	 * Sets the value of the modified property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setModified(String value) {
+		this.modified = value;
+	}
 
-    /**
-     * Gets the value of the custom property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isCustom() {
-        return custom;
-    }
+	/**
+	 * Gets the value of the custom property.
+	 * 
+	 * @return possible object is {@link Boolean }
+	 * 
+	 */
+	public Boolean isCustom() {
+		return custom;
+	}
 
-    /**
-     * Sets the value of the custom property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setCustom(Boolean value) {
-        this.custom = value;
-    }
+	/**
+	 * Sets the value of the custom property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Boolean }
+	 * 
+	 */
+	public void setCustom(Boolean value) {
+		this.custom = value;
+	}
 
-    /**
-     * Gets the value of the how property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getHow() {
-        return how;
-    }
+	/**
+	 * Gets the value of the how property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getHow() {
+		return how;
+	}
 
-    /**
-     * Sets the value of the how property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setHow(String value) {
-        this.how = value;
-    }
+	/**
+	 * Sets the value of the how property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setHow(String value) {
+		this.how = value;
+	}
 
-    /**
-     * Gets the value of the howuri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getHowuri() {
-        return howuri;
-    }
+	/**
+	 * Gets the value of the howuri property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getHowuri() {
+		return howuri;
+	}
 
-    /**
-     * Sets the value of the howuri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setHowuri(String value) {
-        this.howuri = value;
-    }
+	/**
+	 * Sets the value of the howuri property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setHowuri(String value) {
+		this.howuri = value;
+	}
 
-    /**
-     * Gets the value of the why property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getWhy() {
-        return why;
-    }
+	/**
+	 * Gets the value of the why property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getWhy() {
+		return why;
+	}
 
-    /**
-     * Sets the value of the why property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setWhy(String value) {
-        this.why = value;
-    }
+	/**
+	 * Sets the value of the why property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setWhy(String value) {
+		this.why = value;
+	}
 
-    /**
-     * Gets the value of the whyuri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getWhyuri() {
-        return whyuri;
-    }
+	/**
+	 * Gets the value of the whyuri property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getWhyuri() {
+		return whyuri;
+	}
 
-    /**
-     * Sets the value of the whyuri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setWhyuri(String value) {
-        this.whyuri = value;
-    }
+	/**
+	 * Sets the value of the whyuri property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setWhyuri(String value) {
+		this.whyuri = value;
+	}
 
-    /**
-     * Gets the value of the pubconstraint property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the pubconstraint property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPubconstraint().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getPubconstraint() {
-        if (pubconstraint == null) {
-            pubconstraint = new ArrayList<String>();
-        }
-        return this.pubconstraint;
-    }
+	/**
+	 * Gets the value of the pubconstraint property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the pubconstraint property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getPubconstraint().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link String }
+	 * 
+	 * 
+	 */
+	public List<String> getPubconstraint() {
+		if (pubconstraint == null) {
+			pubconstraint = new ArrayList<String>();
+		}
+		return this.pubconstraint;
+	}
 
-    /**
-     * Gets the value of the pubconstrainturi property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the pubconstrainturi property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPubconstrainturi().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getPubconstrainturi() {
-        if (pubconstrainturi == null) {
-            pubconstrainturi = new ArrayList<String>();
-        }
-        return this.pubconstrainturi;
-    }
+	/**
+	 * Gets the value of the pubconstrainturi property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the pubconstrainturi property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getPubconstrainturi().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link String }
+	 * 
+	 * 
+	 */
+	public List<String> getPubconstrainturi() {
+		if (pubconstrainturi == null) {
+			pubconstrainturi = new ArrayList<String>();
+		}
+		return this.pubconstrainturi;
+	}
 
-    /**
-     * Gets a map that contains attributes that aren't bound to any typed property on this class.
-     * 
-     * <p>
-     * the map is keyed by the name of the attribute and 
-     * the value is the string value of the attribute.
-     * 
-     * the map returned by this method is live, and you can add new attribute
-     * by updating the map directly. Because of this design, there's no setter.
-     * 
-     * 
-     * @return
-     *     always non-null
-     */
-    public Map<QName, String> getOtherAttributes() {
-        return otherAttributes;
-    }
+	/**
+	 * Gets a map that contains attributes that aren't bound to any typed
+	 * property on this class.
+	 * 
+	 * <p>
+	 * the map is keyed by the name of the attribute and the value is the string
+	 * value of the attribute.
+	 * 
+	 * the map returned by this method is live, and you can add new attribute by
+	 * updating the map directly. Because of this design, there's no setter.
+	 * 
+	 * 
+	 * @return always non-null
+	 */
+	public Map<QName, String> getOtherAttributes() {
+		return otherAttributes;
+	}
 
 }

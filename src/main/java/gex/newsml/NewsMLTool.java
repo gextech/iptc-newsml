@@ -6,7 +6,6 @@ import java.io.StringWriter;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
@@ -31,7 +30,7 @@ public class NewsMLTool {
 			Unmarshaller unmarshaller = jc.createUnmarshaller();
 			StreamSource source = new StreamSource(inputStream);
 			return unmarshaller.unmarshal(source, NewsMessage.class).getValue();
-		} catch(JAXBException ex) {
+		} catch (JAXBException ex) {
 			throw new NewsMLException("Cannot parse input as NewsML G2", ex);
 		}
 	}
@@ -43,7 +42,7 @@ public class NewsMLTool {
 			StreamSource source = new StreamSource(inputStream);
 
 			return unmarshaller.unmarshal(source, NewsML.class).getValue();
-		} catch(JAXBException ex) {
+		} catch (JAXBException ex) {
 			throw new NewsMLException("Cannot parse input as NewsML 1.2", ex);
 		}
 	}
@@ -52,7 +51,6 @@ public class NewsMLTool {
 		try {
 			JAXBContext jc = JAXBContext.newInstance("gex.newsml.nitf");
 			Unmarshaller unmarshaller = jc.createUnmarshaller();
-			Marshaller marshaller = jc.createMarshaller();
 
 			Document doc = element.getOwnerDocument();
 			DOMSource domSource = new DOMSource(doc);
@@ -71,9 +69,9 @@ public class NewsMLTool {
 
 			StreamSource source = new StreamSource(new StringReader(sourceNitf));
 			return unmarshaller.unmarshal(source, Nitf.class).getValue();
-		} catch(JAXBException ex) {
+		} catch (JAXBException ex) {
 			throw new NewsMLException("Cannot parse input as NITF", ex);
-		} catch(TransformerException ex) {
+		} catch (TransformerException ex) {
 			throw new NewsMLException("Cannot convert input to XML", ex);
 		}
 	}

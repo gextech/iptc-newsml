@@ -3,7 +3,6 @@ package gex.newsml.g2;
 
 import lombok.ToString;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -16,13 +15,16 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-
 /**
- * Type type for a property with a  QCode value in a qcode attribute and optional names
+ * Type type for a property with a QCode value in a qcode attribute and optional
+ * names
  * 
- * <p>Java class for QualPropType complex type.
+ * <p>
+ * Java class for QualPropType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="QualPropType">
@@ -42,105 +44,92 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "QualPropType", propOrder = {
-    "nameOrHierarchyInfo"
-})
-@XmlSeeAlso({
-    gex.newsml.g2.HopHistory.Hop.Action.class,
-    TypedQualPropType.class,
-    Signal.class
-})
-@ToString public class QualPropType
-    extends QCodePropType
-{
+@XmlType(name = "QualPropType", propOrder = { "nameOrHierarchyInfo" })
+@XmlSeeAlso({ gex.newsml.g2.HopHistory.Hop.Action.class, TypedQualPropType.class, Signal.class })
+@ToString
+public class QualPropType extends QCodePropType {
 
-    @XmlElements({
-        @XmlElement(name = "name", type = ConceptNameType.class),
-        @XmlElement(name = "hierarchyInfo", type = HierarchyInfo.class)
-    })
-    protected List<Object> nameOrHierarchyInfo;
-    @XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace")
-    protected String lang;
-    @XmlAttribute(name = "dir")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String dir;
+	@XmlElements({ @XmlElement(name = "name", type = ConceptNameType.class),
+			@XmlElement(name = "hierarchyInfo", type = HierarchyInfo.class) })
+	protected List<Object> nameOrHierarchyInfo;
+	@XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace")
+	protected String lang;
+	@XmlAttribute(name = "dir")
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	protected String dir;
 
-    /**
-     * Gets the value of the nameOrHierarchyInfo property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the nameOrHierarchyInfo property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getNameOrHierarchyInfo().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link ConceptNameType }
-     * {@link HierarchyInfo }
-     * 
-     * 
-     */
-    public List<Object> getNameOrHierarchyInfo() {
-        if (nameOrHierarchyInfo == null) {
-            nameOrHierarchyInfo = new ArrayList<Object>();
-        }
-        return this.nameOrHierarchyInfo;
-    }
+	/**
+	 * Gets the value of the nameOrHierarchyInfo property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the nameOrHierarchyInfo property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getNameOrHierarchyInfo().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link ConceptNameType } {@link HierarchyInfo }
+	 * 
+	 * 
+	 */
+	public List<Object> getNameOrHierarchyInfo() {
+		if (nameOrHierarchyInfo == null) {
+			nameOrHierarchyInfo = new ArrayList<Object>();
+		}
+		return this.nameOrHierarchyInfo;
+	}
 
-    /**
-     * Specifies the language of this property and potentially all descendant properties. xml:lang values of descendant properties override this value. Values are determined by Internet BCP 47.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLang() {
-        return lang;
-    }
+	/**
+	 * Specifies the language of this property and potentially all descendant
+	 * properties. xml:lang values of descendant properties override this value.
+	 * Values are determined by Internet BCP 47.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getLang() {
+		return lang;
+	}
 
-    /**
-     * Sets the value of the lang property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLang(String value) {
-        this.lang = value;
-    }
+	/**
+	 * Sets the value of the lang property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setLang(String value) {
+		this.lang = value;
+	}
 
-    /**
-     * Gets the value of the dir property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDir() {
-        return dir;
-    }
+	/**
+	 * Gets the value of the dir property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getDir() {
+		return dir;
+	}
 
-    /**
-     * Sets the value of the dir property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDir(String value) {
-        this.dir = value;
-    }
+	/**
+	 * Sets the value of the dir property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setDir(String value) {
+		this.dir = value;
+	}
 
 }

@@ -3,7 +3,6 @@ package gex.newsml.g2;
 
 import lombok.ToString;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,13 +23,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
-
 /**
- *  The type for a set of metadata properties of a catalog item
+ * The type for a set of metadata properties of a catalog item
  * 
- * <p>Java class for ContentMetadataCatType complex type.
+ * <p>
+ * Java class for ContentMetadataCatType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ContentMetadataCatType">
@@ -57,504 +58,464 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ContentMetadataCatType", propOrder = {
-    "contentCreated",
-    "contentModified",
-    "creatorOrContributorOrAltId",
-    "any"
-})
-@ToString public class ContentMetadataCatType {
+@XmlType(name = "ContentMetadataCatType", propOrder = { "contentCreated", "contentModified",
+		"creatorOrContributorOrAltId", "any" })
+@ToString
+public class ContentMetadataCatType {
 
-    protected TruncatedDateTimePropType contentCreated;
-    protected TruncatedDateTimePropType contentModified;
-    @XmlElementRefs({
-        @XmlElementRef(name = "altId", namespace = "http://iptc.org/std/nar/2006-10-01/", type = AltId.class, required = false),
-        @XmlElementRef(name = "contributor", namespace = "http://iptc.org/std/nar/2006-10-01/", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "creator", namespace = "http://iptc.org/std/nar/2006-10-01/", type = JAXBElement.class, required = false)
-    })
-    protected List<Object> creatorOrContributorOrAltId;
-    @XmlAnyElement(lax = true)
-    protected List<Object> any;
-    @XmlAttribute(name = "id")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
-    protected String id;
-    @XmlAttribute(name = "creator")
-    protected String creator;
-    @XmlAttribute(name = "creatoruri")
-    protected String creatoruri;
-    @XmlAttribute(name = "modified")
-    protected String modified;
-    @XmlAttribute(name = "custom")
-    protected Boolean custom;
-    @XmlAttribute(name = "how")
-    protected String how;
-    @XmlAttribute(name = "howuri")
-    protected String howuri;
-    @XmlAttribute(name = "why")
-    protected String why;
-    @XmlAttribute(name = "whyuri")
-    protected String whyuri;
-    @XmlAttribute(name = "pubconstraint")
-    protected List<String> pubconstraint;
-    @XmlAttribute(name = "pubconstrainturi")
-    protected List<String> pubconstrainturi;
-    @XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace")
-    protected String lang;
-    @XmlAttribute(name = "dir")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String dir;
-    @XmlAnyAttribute
-    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+	protected TruncatedDateTimePropType contentCreated;
+	protected TruncatedDateTimePropType contentModified;
+	@XmlElementRefs({
+			@XmlElementRef(name = "altId", namespace = "http://iptc.org/std/nar/2006-10-01/", type = AltId.class, required = false),
+			@XmlElementRef(name = "contributor", namespace = "http://iptc.org/std/nar/2006-10-01/", type = JAXBElement.class, required = false),
+			@XmlElementRef(name = "creator", namespace = "http://iptc.org/std/nar/2006-10-01/", type = JAXBElement.class, required = false) })
+	protected List<Object> creatorOrContributorOrAltId;
+	@XmlAnyElement(lax = true)
+	protected List<Object> any;
+	@XmlAttribute(name = "id")
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	@XmlID
+	@XmlSchemaType(name = "ID")
+	protected String id;
+	@XmlAttribute(name = "creator")
+	protected String creator;
+	@XmlAttribute(name = "creatoruri")
+	protected String creatoruri;
+	@XmlAttribute(name = "modified")
+	protected String modified;
+	@XmlAttribute(name = "custom")
+	protected Boolean custom;
+	@XmlAttribute(name = "how")
+	protected String how;
+	@XmlAttribute(name = "howuri")
+	protected String howuri;
+	@XmlAttribute(name = "why")
+	protected String why;
+	@XmlAttribute(name = "whyuri")
+	protected String whyuri;
+	@XmlAttribute(name = "pubconstraint")
+	protected List<String> pubconstraint;
+	@XmlAttribute(name = "pubconstrainturi")
+	protected List<String> pubconstrainturi;
+	@XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace")
+	protected String lang;
+	@XmlAttribute(name = "dir")
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	protected String dir;
+	@XmlAnyAttribute
+	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-    /**
-     * Gets the value of the contentCreated property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TruncatedDateTimePropType }
-     *     
-     */
-    public TruncatedDateTimePropType getContentCreated() {
-        return contentCreated;
-    }
+	/**
+	 * Gets the value of the contentCreated property.
+	 * 
+	 * @return possible object is {@link TruncatedDateTimePropType }
+	 * 
+	 */
+	public TruncatedDateTimePropType getContentCreated() {
+		return contentCreated;
+	}
 
-    /**
-     * Sets the value of the contentCreated property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TruncatedDateTimePropType }
-     *     
-     */
-    public void setContentCreated(TruncatedDateTimePropType value) {
-        this.contentCreated = value;
-    }
+	/**
+	 * Sets the value of the contentCreated property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link TruncatedDateTimePropType }
+	 * 
+	 */
+	public void setContentCreated(TruncatedDateTimePropType value) {
+		this.contentCreated = value;
+	}
 
-    /**
-     * Gets the value of the contentModified property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TruncatedDateTimePropType }
-     *     
-     */
-    public TruncatedDateTimePropType getContentModified() {
-        return contentModified;
-    }
+	/**
+	 * Gets the value of the contentModified property.
+	 * 
+	 * @return possible object is {@link TruncatedDateTimePropType }
+	 * 
+	 */
+	public TruncatedDateTimePropType getContentModified() {
+		return contentModified;
+	}
 
-    /**
-     * Sets the value of the contentModified property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TruncatedDateTimePropType }
-     *     
-     */
-    public void setContentModified(TruncatedDateTimePropType value) {
-        this.contentModified = value;
-    }
+	/**
+	 * Sets the value of the contentModified property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link TruncatedDateTimePropType }
+	 * 
+	 */
+	public void setContentModified(TruncatedDateTimePropType value) {
+		this.contentModified = value;
+	}
 
-    /**
-     * Gets the value of the creatorOrContributorOrAltId property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the creatorOrContributorOrAltId property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getCreatorOrContributorOrAltId().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link FlexAuthorPropType }{@code >}
-     * {@link AltId }
-     * {@link JAXBElement }{@code <}{@link FlexAuthorPropType }{@code >}
-     * 
-     * 
-     */
-    public List<Object> getCreatorOrContributorOrAltId() {
-        if (creatorOrContributorOrAltId == null) {
-            creatorOrContributorOrAltId = new ArrayList<Object>();
-        }
-        return this.creatorOrContributorOrAltId;
-    }
+	/**
+	 * Gets the value of the creatorOrContributorOrAltId property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the creatorOrContributorOrAltId property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getCreatorOrContributorOrAltId().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link JAXBElement }{@code <}{@link FlexAuthorPropType }{@code >}
+	 * {@link AltId } {@link JAXBElement }{@code <}{@link FlexAuthorPropType }
+	 * {@code >}
+	 * 
+	 * 
+	 */
+	public List<Object> getCreatorOrContributorOrAltId() {
+		if (creatorOrContributorOrAltId == null) {
+			creatorOrContributorOrAltId = new ArrayList<Object>();
+		}
+		return this.creatorOrContributorOrAltId;
+	}
 
-    /**
-     * Gets the value of the any property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the any property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getAny().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Object }
-     * {@link Element }
-     * 
-     * 
-     */
-    public List<Object> getAny() {
-        if (any == null) {
-            any = new ArrayList<Object>();
-        }
-        return this.any;
-    }
+	/**
+	 * Gets the value of the any property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the any property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getAny().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link Object }
+	 * {@link Element }
+	 * 
+	 * 
+	 */
+	public List<Object> getAny() {
+		if (any == null) {
+			any = new ArrayList<Object>();
+		}
+		return this.any;
+	}
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setId(String value) {
+		this.id = value;
+	}
 
-    /**
-     * Gets the value of the creator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCreator() {
-        return creator;
-    }
+	/**
+	 * Gets the value of the creator property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCreator() {
+		return creator;
+	}
 
-    /**
-     * Sets the value of the creator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCreator(String value) {
-        this.creator = value;
-    }
+	/**
+	 * Sets the value of the creator property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setCreator(String value) {
+		this.creator = value;
+	}
 
-    /**
-     * Gets the value of the creatoruri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCreatoruri() {
-        return creatoruri;
-    }
+	/**
+	 * Gets the value of the creatoruri property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCreatoruri() {
+		return creatoruri;
+	}
 
-    /**
-     * Sets the value of the creatoruri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCreatoruri(String value) {
-        this.creatoruri = value;
-    }
+	/**
+	 * Sets the value of the creatoruri property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setCreatoruri(String value) {
+		this.creatoruri = value;
+	}
 
-    /**
-     * Gets the value of the modified property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getModified() {
-        return modified;
-    }
+	/**
+	 * Gets the value of the modified property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getModified() {
+		return modified;
+	}
 
-    /**
-     * Sets the value of the modified property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setModified(String value) {
-        this.modified = value;
-    }
+	/**
+	 * Sets the value of the modified property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setModified(String value) {
+		this.modified = value;
+	}
 
-    /**
-     * Gets the value of the custom property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isCustom() {
-        return custom;
-    }
+	/**
+	 * Gets the value of the custom property.
+	 * 
+	 * @return possible object is {@link Boolean }
+	 * 
+	 */
+	public Boolean isCustom() {
+		return custom;
+	}
 
-    /**
-     * Sets the value of the custom property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setCustom(Boolean value) {
-        this.custom = value;
-    }
+	/**
+	 * Sets the value of the custom property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Boolean }
+	 * 
+	 */
+	public void setCustom(Boolean value) {
+		this.custom = value;
+	}
 
-    /**
-     * Gets the value of the how property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getHow() {
-        return how;
-    }
+	/**
+	 * Gets the value of the how property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getHow() {
+		return how;
+	}
 
-    /**
-     * Sets the value of the how property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setHow(String value) {
-        this.how = value;
-    }
+	/**
+	 * Sets the value of the how property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setHow(String value) {
+		this.how = value;
+	}
 
-    /**
-     * Gets the value of the howuri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getHowuri() {
-        return howuri;
-    }
+	/**
+	 * Gets the value of the howuri property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getHowuri() {
+		return howuri;
+	}
 
-    /**
-     * Sets the value of the howuri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setHowuri(String value) {
-        this.howuri = value;
-    }
+	/**
+	 * Sets the value of the howuri property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setHowuri(String value) {
+		this.howuri = value;
+	}
 
-    /**
-     * Gets the value of the why property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getWhy() {
-        return why;
-    }
+	/**
+	 * Gets the value of the why property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getWhy() {
+		return why;
+	}
 
-    /**
-     * Sets the value of the why property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setWhy(String value) {
-        this.why = value;
-    }
+	/**
+	 * Sets the value of the why property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setWhy(String value) {
+		this.why = value;
+	}
 
-    /**
-     * Gets the value of the whyuri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getWhyuri() {
-        return whyuri;
-    }
+	/**
+	 * Gets the value of the whyuri property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getWhyuri() {
+		return whyuri;
+	}
 
-    /**
-     * Sets the value of the whyuri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setWhyuri(String value) {
-        this.whyuri = value;
-    }
+	/**
+	 * Sets the value of the whyuri property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setWhyuri(String value) {
+		this.whyuri = value;
+	}
 
-    /**
-     * Gets the value of the pubconstraint property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the pubconstraint property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPubconstraint().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getPubconstraint() {
-        if (pubconstraint == null) {
-            pubconstraint = new ArrayList<String>();
-        }
-        return this.pubconstraint;
-    }
+	/**
+	 * Gets the value of the pubconstraint property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the pubconstraint property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getPubconstraint().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link String }
+	 * 
+	 * 
+	 */
+	public List<String> getPubconstraint() {
+		if (pubconstraint == null) {
+			pubconstraint = new ArrayList<String>();
+		}
+		return this.pubconstraint;
+	}
 
-    /**
-     * Gets the value of the pubconstrainturi property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the pubconstrainturi property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPubconstrainturi().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
-     * 
-     * 
-     */
-    public List<String> getPubconstrainturi() {
-        if (pubconstrainturi == null) {
-            pubconstrainturi = new ArrayList<String>();
-        }
-        return this.pubconstrainturi;
-    }
+	/**
+	 * Gets the value of the pubconstrainturi property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the pubconstrainturi property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getPubconstrainturi().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link String }
+	 * 
+	 * 
+	 */
+	public List<String> getPubconstrainturi() {
+		if (pubconstrainturi == null) {
+			pubconstrainturi = new ArrayList<String>();
+		}
+		return this.pubconstrainturi;
+	}
 
-    /**
-     * Specifies the language of this property and potentially all descendant properties. xml:lang values of descendant properties override this value. Values are determined by Internet BCP 47.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLang() {
-        return lang;
-    }
+	/**
+	 * Specifies the language of this property and potentially all descendant
+	 * properties. xml:lang values of descendant properties override this value.
+	 * Values are determined by Internet BCP 47.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getLang() {
+		return lang;
+	}
 
-    /**
-     * Sets the value of the lang property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLang(String value) {
-        this.lang = value;
-    }
+	/**
+	 * Sets the value of the lang property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setLang(String value) {
+		this.lang = value;
+	}
 
-    /**
-     * Gets the value of the dir property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDir() {
-        return dir;
-    }
+	/**
+	 * Gets the value of the dir property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getDir() {
+		return dir;
+	}
 
-    /**
-     * Sets the value of the dir property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDir(String value) {
-        this.dir = value;
-    }
+	/**
+	 * Sets the value of the dir property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setDir(String value) {
+		this.dir = value;
+	}
 
-    /**
-     * Gets a map that contains attributes that aren't bound to any typed property on this class.
-     * 
-     * <p>
-     * the map is keyed by the name of the attribute and 
-     * the value is the string value of the attribute.
-     * 
-     * the map returned by this method is live, and you can add new attribute
-     * by updating the map directly. Because of this design, there's no setter.
-     * 
-     * 
-     * @return
-     *     always non-null
-     */
-    public Map<QName, String> getOtherAttributes() {
-        return otherAttributes;
-    }
+	/**
+	 * Gets a map that contains attributes that aren't bound to any typed
+	 * property on this class.
+	 * 
+	 * <p>
+	 * the map is keyed by the name of the attribute and the value is the string
+	 * value of the attribute.
+	 * 
+	 * the map returned by this method is live, and you can add new attribute by
+	 * updating the map directly. Because of this design, there's no setter.
+	 * 
+	 * 
+	 * @return always non-null
+	 */
+	public Map<QName, String> getOtherAttributes() {
+		return otherAttributes;
+	}
 
 }

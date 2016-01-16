@@ -3,7 +3,6 @@ package gex.newsml.nitf;
 
 import lombok.ToString;
 
-
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -18,11 +17,13 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 
-
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -54,186 +55,169 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "nitf-col")
-@ToString public class NitfCol {
+@ToString
+public class NitfCol {
 
-    @XmlAttribute(name = "idsrc")
-    protected String idsrc;
-    @XmlAttribute(name = "value")
-    protected String value;
-    @XmlAttribute(name = "occurrences")
-    protected String occurrences;
-    @XmlAttribute(name = "data-type")
-    protected String dataType;
-    @XmlAttribute(name = "data-format")
-    protected String dataFormat;
-    @XmlAttribute(name = "id")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
-    protected String id;
-    @XmlAnyAttribute
-    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+	@XmlAttribute(name = "idsrc")
+	protected String idsrc;
+	@XmlAttribute(name = "value")
+	protected String value;
+	@XmlAttribute(name = "occurrences")
+	protected String occurrences;
+	@XmlAttribute(name = "data-type")
+	protected String dataType;
+	@XmlAttribute(name = "data-format")
+	protected String dataFormat;
+	@XmlAttribute(name = "id")
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	@XmlID
+	@XmlSchemaType(name = "ID")
+	protected String id;
+	@XmlAnyAttribute
+	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-    /**
-     * Gets the value of the idsrc property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getIdsrc() {
-        return idsrc;
-    }
+	/**
+	 * Gets the value of the idsrc property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getIdsrc() {
+		return idsrc;
+	}
 
-    /**
-     * Sets the value of the idsrc property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIdsrc(String value) {
-        this.idsrc = value;
-    }
+	/**
+	 * Sets the value of the idsrc property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setIdsrc(String value) {
+		this.idsrc = value;
+	}
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getValue() {
-        return value;
-    }
+	/**
+	 * Gets the value of the value property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getValue() {
+		return value;
+	}
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setValue(String value) {
-        this.value = value;
-    }
+	/**
+	 * Sets the value of the value property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setValue(String value) {
+		this.value = value;
+	}
 
-    /**
-     * Gets the value of the occurrences property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getOccurrences() {
-        return occurrences;
-    }
+	/**
+	 * Gets the value of the occurrences property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getOccurrences() {
+		return occurrences;
+	}
 
-    /**
-     * Sets the value of the occurrences property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setOccurrences(String value) {
-        this.occurrences = value;
-    }
+	/**
+	 * Sets the value of the occurrences property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setOccurrences(String value) {
+		this.occurrences = value;
+	}
 
-    /**
-     * Gets the value of the dataType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDataType() {
-        return dataType;
-    }
+	/**
+	 * Gets the value of the dataType property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getDataType() {
+		return dataType;
+	}
 
-    /**
-     * Sets the value of the dataType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDataType(String value) {
-        this.dataType = value;
-    }
+	/**
+	 * Sets the value of the dataType property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setDataType(String value) {
+		this.dataType = value;
+	}
 
-    /**
-     * Gets the value of the dataFormat property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDataFormat() {
-        return dataFormat;
-    }
+	/**
+	 * Gets the value of the dataFormat property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getDataFormat() {
+		return dataFormat;
+	}
 
-    /**
-     * Sets the value of the dataFormat property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDataFormat(String value) {
-        this.dataFormat = value;
-    }
+	/**
+	 * Sets the value of the dataFormat property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setDataFormat(String value) {
+		this.dataFormat = value;
+	}
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setId(String value) {
+		this.id = value;
+	}
 
-    /**
-     * Gets a map that contains attributes that aren't bound to any typed property on this class.
-     * 
-     * <p>
-     * the map is keyed by the name of the attribute and 
-     * the value is the string value of the attribute.
-     * 
-     * the map returned by this method is live, and you can add new attribute
-     * by updating the map directly. Because of this design, there's no setter.
-     * 
-     * 
-     * @return
-     *     always non-null
-     */
-    public Map<QName, String> getOtherAttributes() {
-        return otherAttributes;
-    }
+	/**
+	 * Gets a map that contains attributes that aren't bound to any typed
+	 * property on this class.
+	 * 
+	 * <p>
+	 * the map is keyed by the name of the attribute and the value is the string
+	 * value of the attribute.
+	 * 
+	 * the map returned by this method is live, and you can add new attribute by
+	 * updating the map directly. Because of this design, there's no setter.
+	 * 
+	 * 
+	 * @return always non-null
+	 */
+	public Map<QName, String> getOtherAttributes() {
+		return otherAttributes;
+	}
 
 }

@@ -3,7 +3,6 @@ package gex.newsml.nitf;
 
 import lombok.ToString;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,11 +23,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
-
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -67,206 +68,179 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "correctionOrEvlocOrDocId"
-})
+@XmlType(name = "", propOrder = { "correctionOrEvlocOrDocId" })
 @XmlRootElement(name = "docdata")
-@ToString public class Docdata {
+@ToString
+public class Docdata {
 
-    @XmlElementRefs({
-        @XmlElementRef(name = "doc.copyright", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DocCopyright.class, required = false),
-        @XmlElementRef(name = "fixture", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Fixture.class, required = false),
-        @XmlElementRef(name = "date.expire", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DateExpire.class, required = false),
-        @XmlElementRef(name = "doc-scope", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DocScope.class, required = false),
-        @XmlElementRef(name = "urgency", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Urgency.class, required = false),
-        @XmlElementRef(name = "date.issue", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DateIssue.class, required = false),
-        @XmlElementRef(name = "du-key", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DuKey.class, required = false),
-        @XmlElementRef(name = "doc.rights", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DocRights.class, required = false),
-        @XmlElementRef(name = "correction", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Correction.class, required = false),
-        @XmlElementRef(name = "evloc", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Evloc.class, required = false),
-        @XmlElementRef(name = "key-list", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = KeyList.class, required = false),
-        @XmlElementRef(name = "series", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Series.class, required = false),
-        @XmlElementRef(name = "identified-content", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = IdentifiedContent.class, required = false),
-        @XmlElementRef(name = "doc-id", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DocId.class, required = false),
-        @XmlElementRef(name = "date.release", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DateRelease.class, required = false),
-        @XmlElementRef(name = "del-list", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DelList.class, required = false),
-        @XmlElementRef(name = "ed-msg", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = EdMsg.class, required = false)
-    })
-    @XmlAnyElement(lax = true)
-    protected List<Object> correctionOrEvlocOrDocId;
-    @XmlAttribute(name = "management-status")
-    protected String managementStatus;
-    @XmlAttribute(name = "management-doc-idref")
-    protected String managementDocIdref;
-    @XmlAttribute(name = "management-idref-status")
-    protected String managementIdrefStatus;
-    @XmlAttribute(name = "id")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
-    protected String id;
-    @XmlAnyAttribute
-    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+	@XmlElementRefs({
+			@XmlElementRef(name = "doc.copyright", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DocCopyright.class, required = false),
+			@XmlElementRef(name = "fixture", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Fixture.class, required = false),
+			@XmlElementRef(name = "date.expire", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DateExpire.class, required = false),
+			@XmlElementRef(name = "doc-scope", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DocScope.class, required = false),
+			@XmlElementRef(name = "urgency", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Urgency.class, required = false),
+			@XmlElementRef(name = "date.issue", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DateIssue.class, required = false),
+			@XmlElementRef(name = "du-key", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DuKey.class, required = false),
+			@XmlElementRef(name = "doc.rights", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DocRights.class, required = false),
+			@XmlElementRef(name = "correction", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Correction.class, required = false),
+			@XmlElementRef(name = "evloc", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Evloc.class, required = false),
+			@XmlElementRef(name = "key-list", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = KeyList.class, required = false),
+			@XmlElementRef(name = "series", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Series.class, required = false),
+			@XmlElementRef(name = "identified-content", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = IdentifiedContent.class, required = false),
+			@XmlElementRef(name = "doc-id", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DocId.class, required = false),
+			@XmlElementRef(name = "date.release", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DateRelease.class, required = false),
+			@XmlElementRef(name = "del-list", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DelList.class, required = false),
+			@XmlElementRef(name = "ed-msg", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = EdMsg.class, required = false) })
+	@XmlAnyElement(lax = true)
+	protected List<Object> correctionOrEvlocOrDocId;
+	@XmlAttribute(name = "management-status")
+	protected String managementStatus;
+	@XmlAttribute(name = "management-doc-idref")
+	protected String managementDocIdref;
+	@XmlAttribute(name = "management-idref-status")
+	protected String managementIdrefStatus;
+	@XmlAttribute(name = "id")
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	@XmlID
+	@XmlSchemaType(name = "ID")
+	protected String id;
+	@XmlAnyAttribute
+	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-    /**
-     * Gets the value of the correctionOrEvlocOrDocId property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the correctionOrEvlocOrDocId property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getCorrectionOrEvlocOrDocId().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link DocCopyright }
-     * {@link Fixture }
-     * {@link DateExpire }
-     * {@link DocScope }
-     * {@link Urgency }
-     * {@link DateIssue }
-     * {@link DuKey }
-     * {@link DocRights }
-     * {@link Correction }
-     * {@link Evloc }
-     * {@link KeyList }
-     * {@link Object }
-     * {@link Series }
-     * {@link IdentifiedContent }
-     * {@link DocId }
-     * {@link DateRelease }
-     * {@link DelList }
-     * {@link Element }
-     * {@link EdMsg }
-     * 
-     * 
-     */
-    public List<Object> getCorrectionOrEvlocOrDocId() {
-        if (correctionOrEvlocOrDocId == null) {
-            correctionOrEvlocOrDocId = new ArrayList<Object>();
-        }
-        return this.correctionOrEvlocOrDocId;
-    }
+	/**
+	 * Gets the value of the correctionOrEvlocOrDocId property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the correctionOrEvlocOrDocId property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getCorrectionOrEvlocOrDocId().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link DocCopyright } {@link Fixture } {@link DateExpire }
+	 * {@link DocScope } {@link Urgency } {@link DateIssue } {@link DuKey }
+	 * {@link DocRights } {@link Correction } {@link Evloc } {@link KeyList }
+	 * {@link Object } {@link Series } {@link IdentifiedContent } {@link DocId }
+	 * {@link DateRelease } {@link DelList } {@link Element } {@link EdMsg }
+	 * 
+	 * 
+	 */
+	public List<Object> getCorrectionOrEvlocOrDocId() {
+		if (correctionOrEvlocOrDocId == null) {
+			correctionOrEvlocOrDocId = new ArrayList<Object>();
+		}
+		return this.correctionOrEvlocOrDocId;
+	}
 
-    /**
-     * Gets the value of the managementStatus property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getManagementStatus() {
-        return managementStatus;
-    }
+	/**
+	 * Gets the value of the managementStatus property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getManagementStatus() {
+		return managementStatus;
+	}
 
-    /**
-     * Sets the value of the managementStatus property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setManagementStatus(String value) {
-        this.managementStatus = value;
-    }
+	/**
+	 * Sets the value of the managementStatus property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setManagementStatus(String value) {
+		this.managementStatus = value;
+	}
 
-    /**
-     * Gets the value of the managementDocIdref property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getManagementDocIdref() {
-        return managementDocIdref;
-    }
+	/**
+	 * Gets the value of the managementDocIdref property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getManagementDocIdref() {
+		return managementDocIdref;
+	}
 
-    /**
-     * Sets the value of the managementDocIdref property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setManagementDocIdref(String value) {
-        this.managementDocIdref = value;
-    }
+	/**
+	 * Sets the value of the managementDocIdref property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setManagementDocIdref(String value) {
+		this.managementDocIdref = value;
+	}
 
-    /**
-     * Gets the value of the managementIdrefStatus property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getManagementIdrefStatus() {
-        return managementIdrefStatus;
-    }
+	/**
+	 * Gets the value of the managementIdrefStatus property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getManagementIdrefStatus() {
+		return managementIdrefStatus;
+	}
 
-    /**
-     * Sets the value of the managementIdrefStatus property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setManagementIdrefStatus(String value) {
-        this.managementIdrefStatus = value;
-    }
+	/**
+	 * Sets the value of the managementIdrefStatus property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setManagementIdrefStatus(String value) {
+		this.managementIdrefStatus = value;
+	}
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setId(String value) {
+		this.id = value;
+	}
 
-    /**
-     * Gets a map that contains attributes that aren't bound to any typed property on this class.
-     * 
-     * <p>
-     * the map is keyed by the name of the attribute and 
-     * the value is the string value of the attribute.
-     * 
-     * the map returned by this method is live, and you can add new attribute
-     * by updating the map directly. Because of this design, there's no setter.
-     * 
-     * 
-     * @return
-     *     always non-null
-     */
-    public Map<QName, String> getOtherAttributes() {
-        return otherAttributes;
-    }
+	/**
+	 * Gets a map that contains attributes that aren't bound to any typed
+	 * property on this class.
+	 * 
+	 * <p>
+	 * the map is keyed by the name of the attribute and the value is the string
+	 * value of the attribute.
+	 * 
+	 * the map returned by this method is live, and you can add new attribute by
+	 * updating the map directly. Because of this design, there's no setter.
+	 * 
+	 * 
+	 * @return always non-null
+	 */
+	public Map<QName, String> getOtherAttributes() {
+		return otherAttributes;
+	}
 
 }

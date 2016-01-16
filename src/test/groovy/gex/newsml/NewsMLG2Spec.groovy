@@ -7,21 +7,19 @@ import spock.lang.*
 import javax.xml.bind.*
 import javax.xml.transform.stream.*
 
-import spock.lang.*
-
 class NewsMLG2Spec extends Specification {
 
-  def 'We should be able to parse newsml g2 content'() {
-    setup:
-      JAXBContext jc = JAXBContext.newInstance('gex.newsml.g2')
-      Unmarshaller unmarshaller = jc.createUnmarshaller()
-      StreamSource streamSource = new StreamSource(getClass().getResourceAsStream('/201601026085EY-MIDEAST-CRISISSYRIA_FIGHTERS.xml'))
+	def 'We should be able to parse newsml g2 content'() {
+		setup:
+			JAXBContext jc = JAXBContext.newInstance('gex.newsml.g2')
+			Unmarshaller unmarshaller = jc.createUnmarshaller()
+			StreamSource streamSource = new StreamSource(getClass().getResourceAsStream('/201601026085EY-MIDEAST-CRISISSYRIA_FIGHTERS.xml'))
 
-    when:
-      NewsMessage newsMessage = unmarshaller.unmarshal(streamSource, NewsMessage).value
+		when:
+			NewsMessage newsMessage = unmarshaller.unmarshal(streamSource, NewsMessage).value
 
 
-    then:
+		then:
 			newsMessage
 			newsMessage.itemSet.any.size() == 3
 
@@ -35,17 +33,11 @@ class NewsMLG2Spec extends Specification {
 
 		when:
 			def video = videos.first()
-			def remoteContent = video.contentSet.inlineXMLOrInlineDataOrRemoteContent.grep {
-				it instanceof RemoteContentPropType
-			}.collect {
-				it.reutersAltId
-			}.flatten().first()
+			def remoteContent = video.contentSet.inlineXMLOrInlineDataOrRemoteContent.grep { it instanceof RemoteContentPropType }.collect { it.reutersAltId }.flatten().first()
 
 
 		then:
 			remoteContent.present
 			remoteContent.value == '201601026085WD-MIDEAST-CRISISSYRIA_FIGHTERS.mpg'
-
-  }
-
+	}
 }
