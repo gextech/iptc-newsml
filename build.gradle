@@ -1,3 +1,13 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.github.ben-manes:gradle-versions-plugin:0.10.1'
+  }
+}
+
+
 plugins {
   id "com.jfrog.bintray" version "1.4"
   id 'net.researchgate.release' version '2.1.2'
@@ -8,6 +18,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'java'
 apply plugin: 'groovy'
+apply plugin: 'com.github.ben-manes.versions'
 
 import java.text.SimpleDateFormat
 
