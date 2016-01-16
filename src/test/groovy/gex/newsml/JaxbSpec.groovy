@@ -20,7 +20,7 @@ class JaxbSpec extends Specification {
       newsItem != null
 
     where:
-      file << ['/AFP_751HA.xml', '/BAS-Y-MUNDO-MXC_20160116_1402.XML', 'DV2209430.xml']
+      file << ['/AFP_751HA.xml', '/BAS-Y-MUNDO-MXC_20160116_1402.XML', '/DV2209430.XML']
 	}
 
   def 'Test afp file'() {
