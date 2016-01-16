@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -42,7 +45,7 @@ import javax.xml.namespace.QName;
     "value"
 })
 @XmlRootElement(name = "sameAsScheme")
-public class SameAsScheme {
+@ToString public class SameAsScheme {
 
     @XmlValue
     protected String value;

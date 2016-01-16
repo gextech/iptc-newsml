@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -126,7 +129,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "newsCoverage")
-public class NewsCoverage {
+@ToString public class NewsCoverage {
 
     @XmlElement(required = true)
     protected List<NewsCoverage.Planning> planning;
@@ -588,7 +591,7 @@ public class NewsCoverage {
         "planningExtProperty",
         "any"
     })
-    public static class Planning {
+    @ToString public static class Planning {
 
         @XmlElement(name = "g2contentType")
         protected NewsCoverage.Planning.G2ContentType g2ContentType;
@@ -1295,7 +1298,7 @@ public class NewsCoverage {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class AssignedTo
+        @ToString public static class AssignedTo
             extends Flex1PartyPropType
         {
 
@@ -1378,7 +1381,7 @@ public class NewsCoverage {
         @XmlType(name = "", propOrder = {
             "value"
         })
-        public static class G2ContentType {
+        @ToString public static class G2ContentType {
 
             @XmlValue
             protected String value;
@@ -1730,7 +1733,7 @@ public class NewsCoverage {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class ItemCount {
+        @ToString public static class ItemCount {
 
             @XmlAttribute(name = "rangefrom", required = true)
             @XmlSchemaType(name = "nonNegativeInteger")
@@ -2109,7 +2112,7 @@ public class NewsCoverage {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class NewsContentCharacteristics {
+        @ToString public static class NewsContentCharacteristics {
 
             @XmlAttribute(name = "wordcount")
             @XmlSchemaType(name = "nonNegativeInteger")

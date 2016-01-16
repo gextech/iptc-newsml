@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
@@ -22,7 +25,7 @@ import javax.xml.namespace.QName;
  * 
  */
 @XmlRegistry
-public class ObjectFactory {
+@ToString public class ObjectFactory {
 
     private final static QName _Role_QNAME = new QName("http://iptc.org/std/nar/2006-10-01/", "role");
     private final static QName _Rt_QNAME = new QName("http://iptc.org/std/nar/2006-10-01/", "rt");

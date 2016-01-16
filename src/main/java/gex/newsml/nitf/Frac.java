@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -47,7 +50,7 @@ import javax.xml.namespace.QName;
     "denom"
 })
 @XmlRootElement(name = "frac")
-public class Frac {
+@ToString public class Frac {
 
     @XmlElement(required = true)
     protected Numer numer;

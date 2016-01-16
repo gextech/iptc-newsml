@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +47,7 @@ import javax.xml.namespace.QName;
 @XmlType(name = "ElectronicAddressType", propOrder = {
     "value"
 })
-public class ElectronicAddressType {
+@ToString public class ElectronicAddressType {
 
     @XmlValue
     protected String value;

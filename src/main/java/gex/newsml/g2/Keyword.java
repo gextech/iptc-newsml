@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "keyword")
-public class Keyword
+@ToString public class Keyword
     extends IntlStringType
 {
 

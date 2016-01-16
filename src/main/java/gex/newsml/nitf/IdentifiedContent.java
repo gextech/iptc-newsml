@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -53,7 +56,7 @@ import javax.xml.namespace.QName;
     "personOrOrgOrLocation"
 })
 @XmlRootElement(name = "identified-content")
-public class IdentifiedContent {
+@ToString public class IdentifiedContent {
 
     @XmlElements({
         @XmlElement(name = "person", type = Person.class),

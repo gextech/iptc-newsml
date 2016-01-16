@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -68,7 +71,7 @@ import org.w3c.dom.Element;
     "correctionOrEvlocOrDocId"
 })
 @XmlRootElement(name = "docdata")
-public class Docdata {
+@ToString public class Docdata {
 
     @XmlElementRefs({
         @XmlElementRef(name = "doc.copyright", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = DocCopyright.class, required = false),

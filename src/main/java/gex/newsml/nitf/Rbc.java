@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -34,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
     "rb"
 })
 @XmlRootElement(name = "rbc")
-public class Rbc {
+@ToString public class Rbc {
 
     @XmlElement(required = true)
     protected List<Rb> rb;

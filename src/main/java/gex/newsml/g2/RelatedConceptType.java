@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlSeeAlso({
     FlexRelatedConceptType.class
 })
-public class RelatedConceptType
+@ToString public class RelatedConceptType
     extends FlexPropType
 {
 
@@ -258,7 +261,7 @@ public class RelatedConceptType
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class Related
+    @ToString public static class Related
         extends FlexPropType
     {
 

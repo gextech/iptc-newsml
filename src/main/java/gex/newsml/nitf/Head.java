@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -61,7 +64,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "head")
-public class Head {
+@ToString public class Head {
 
     protected Title title;
     protected List<Meta> meta;

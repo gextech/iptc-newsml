@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -61,7 +64,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "schemeMeta")
-public class SchemeMeta {
+@ToString public class SchemeMeta {
 
     @XmlElements({
         @XmlElement(name = "sameAsScheme", type = SameAsScheme.class),

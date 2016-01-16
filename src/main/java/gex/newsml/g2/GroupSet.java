@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -94,7 +97,7 @@ import org.w3c.dom.Element;
     "group"
 })
 @XmlRootElement(name = "groupSet")
-public class GroupSet {
+@ToString public class GroupSet {
 
     @XmlElement(required = true)
     protected List<GroupSet.Group> group;
@@ -531,7 +534,7 @@ public class GroupSet {
     @XmlType(name = "", propOrder = {
         "groupRefOrItemRefOrConceptRef"
     })
-    public static class Group {
+    @ToString public static class Group {
 
         @XmlElementRefs({
             @XmlElementRef(name = "groupExtProperty", namespace = "http://iptc.org/std/nar/2006-10-01/", type = JAXBElement.class, required = false),
@@ -1078,7 +1081,7 @@ public class GroupSet {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class ConceptRef
+        @ToString public static class ConceptRef
             extends FlexPropType
         {
 
@@ -1107,7 +1110,7 @@ public class GroupSet {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class GroupRef {
+        @ToString public static class GroupRef {
 
             @XmlAttribute(name = "idref", required = true)
             @XmlIDREF

@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -101,7 +104,7 @@ import javax.xml.namespace.QName;
     "tr"
 })
 @XmlRootElement(name = "table")
-public class Table {
+@ToString public class Table {
 
     protected Caption caption;
     protected Col col;

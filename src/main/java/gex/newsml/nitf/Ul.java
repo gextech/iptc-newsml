@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,7 +48,7 @@ import javax.xml.namespace.QName;
     "li"
 })
 @XmlRootElement(name = "ul")
-public class Ul {
+@ToString public class Ul {
 
     @XmlElement(required = true)
     protected List<Li> li;

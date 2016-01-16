@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -72,7 +75,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "block")
-public class Block {
+@ToString public class Block {
 
     protected Tobject tobject;
     @XmlElement(name = "key-list")

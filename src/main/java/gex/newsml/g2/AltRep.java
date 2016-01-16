@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,7 +53,7 @@ import javax.xml.namespace.QName;
     "value"
 })
 @XmlRootElement(name = "altRep")
-public class AltRep {
+@ToString public class AltRep {
 
     @XmlValue
     protected String value;

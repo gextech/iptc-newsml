@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,7 +48,7 @@ import javax.xml.namespace.QName;
     "fromSrc"
 })
 @XmlRootElement(name = "del-list")
-public class DelList {
+@ToString public class DelList {
 
     @XmlElement(name = "from-src")
     protected List<FromSrc> fromSrc;

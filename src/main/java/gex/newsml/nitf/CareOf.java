@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,7 +43,7 @@ import javax.xml.namespace.QName;
     "content"
 })
 @XmlRootElement(name = "care.of")
-public class CareOf {
+@ToString public class CareOf {
 
     @XmlValue
     protected String content;

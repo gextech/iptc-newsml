@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -62,7 +65,7 @@ import javax.xml.namespace.QName;
     "country",
     "postalCode"
 })
-public class AddressType {
+@ToString public class AddressType {
 
     protected List<AddressType.Line> line;
     protected List<Flex1RolePropType> locality;
@@ -608,7 +611,7 @@ public class AddressType {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class Line
+    @ToString public static class Line
         extends IntlStringType
     {
 

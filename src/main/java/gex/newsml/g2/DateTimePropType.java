@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -47,7 +50,7 @@ import javax.xml.namespace.QName;
 @XmlSeeAlso({
     gex.newsml.g2.NewsMessage.Header.Timestamp.class
 })
-public class DateTimePropType {
+@ToString public class DateTimePropType {
 
     @XmlValue
     @XmlSchemaType(name = "dateTime")

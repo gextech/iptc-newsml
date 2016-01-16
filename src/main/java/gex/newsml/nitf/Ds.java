@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -39,7 +42,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "ds")
-public class Ds {
+@ToString public class Ds {
 
     @XmlAttribute(name = "num", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -35,7 +38,7 @@ import javax.xml.namespace.QName;
 @XmlType(name = "FlexRelatedConceptType", propOrder = {
     "bag"
 })
-public class FlexRelatedConceptType
+@ToString public class FlexRelatedConceptType
     extends RelatedConceptType
 {
 

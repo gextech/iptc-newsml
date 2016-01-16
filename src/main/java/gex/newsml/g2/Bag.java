@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,7 +61,7 @@ import javax.xml.namespace.QName;
     "bit"
 })
 @XmlRootElement(name = "bag")
-public class Bag {
+@ToString public class Bag {
 
     @XmlElement(required = true)
     protected List<Bag.Bit> bit;
@@ -488,7 +491,7 @@ public class Bag {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class Bit
+    @ToString public static class Bit
         extends QCodePropType
     {
 

@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -59,7 +62,7 @@ import javax.xml.namespace.QName;
     "eventDetails"
 })
 @XmlRootElement(name = "event")
-public class Event {
+@ToString public class Event {
 
     @XmlElement(required = true)
     protected List<ConceptNameType> name;

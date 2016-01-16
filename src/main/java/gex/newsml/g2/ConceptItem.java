@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,7 +46,7 @@ import javax.xml.bind.annotation.XmlType;
     "concept"
 })
 @XmlRootElement(name = "conceptItem")
-public class ConceptItem
+@ToString public class ConceptItem
     extends AnyItemType
 {
 

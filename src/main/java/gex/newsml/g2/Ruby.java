@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,7 +61,7 @@ import javax.xml.namespace.QName;
     "content"
 })
 @XmlRootElement(name = "ruby")
-public class Ruby {
+@ToString public class Ruby {
 
     @XmlElementRefs({
         @XmlElementRef(name = "rb", namespace = "http://iptc.org/std/nar/2006-10-01/", type = JAXBElement.class, required = false),

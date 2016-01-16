@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -65,7 +68,7 @@ import org.w3c.dom.Element;
     Note.class,
     Definition.class
 })
-public class BlockType {
+@ToString public class BlockType {
 
     @XmlElementRefs({
         @XmlElementRef(name = "ruby", namespace = "http://iptc.org/std/nar/2006-10-01/", type = Ruby.class, required = false),

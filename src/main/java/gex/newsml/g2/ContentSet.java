@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -84,7 +87,7 @@ import org.w3c.dom.Element;
     "inlineXMLOrInlineDataOrRemoteContent"
 })
 @XmlRootElement(name = "contentSet")
-public class ContentSet {
+@ToString public class ContentSet {
 
     @XmlElements({
         @XmlElement(name = "inlineXML", type = ContentSet.InlineXML.class),
@@ -499,7 +502,7 @@ public class ContentSet {
     @XmlType(name = "", propOrder = {
         "value"
     })
-    public static class InlineData {
+    @ToString public static class InlineData {
 
         @XmlValue
         protected String value;
@@ -2207,7 +2210,7 @@ public class ContentSet {
     @XmlType(name = "", propOrder = {
         "any"
     })
-    public static class InlineXML {
+    @ToString public static class InlineXML {
 
         @XmlAnyElement(lax = true)
         protected Object any;

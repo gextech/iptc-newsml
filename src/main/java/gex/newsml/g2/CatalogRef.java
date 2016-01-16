@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,7 +48,7 @@ import javax.xml.namespace.QName;
     "title"
 })
 @XmlRootElement(name = "catalogRef")
-public class CatalogRef {
+@ToString public class CatalogRef {
 
     protected List<Label1Type> title;
     @XmlAttribute(name = "href", required = true)

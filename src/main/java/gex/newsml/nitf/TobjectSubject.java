@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,7 +46,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "tobject.subject")
-public class TobjectSubject {
+@ToString public class TobjectSubject {
 
     @XmlAttribute(name = "tobject.subject.ipr")
     protected String tobjectSubjectIpr;

@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -68,7 +71,7 @@ import org.w3c.dom.Element;
     "copyrightNoticeOrUsageTermsOrLink",
     "any"
 })
-public class RightsInfoType {
+@ToString public class RightsInfoType {
 
     protected FlexPersonPropType accountable;
     protected FlexPartyPropType copyrightHolder;

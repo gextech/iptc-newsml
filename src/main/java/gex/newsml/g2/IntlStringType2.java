@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -47,7 +50,7 @@ import javax.xml.namespace.QName;
 @XmlSeeAlso({
     AltId.class
 })
-public class IntlStringType2 {
+@ToString public class IntlStringType2 {
 
     @XmlValue
     protected String value;

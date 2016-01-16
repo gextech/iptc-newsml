@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -51,7 +54,7 @@ import javax.xml.namespace.QName;
     "tableReference"
 })
 @XmlRootElement(name = "nitf-table")
-public class NitfTable {
+@ToString public class NitfTable {
 
     @XmlElement(name = "nitf-table-metadata", required = true)
     protected NitfTableMetadata nitfTableMetadata;

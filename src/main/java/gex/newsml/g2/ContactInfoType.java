@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -73,7 +76,7 @@ import org.w3c.dom.Element;
     "emailOrImOrPhone",
     "any"
 })
-public class ContactInfoType {
+@ToString public class ContactInfoType {
 
     @XmlElementRefs({
         @XmlElementRef(name = "fax", namespace = "http://iptc.org/std/nar/2006-10-01/", type = JAXBElement.class, required = false),
@@ -559,7 +562,7 @@ public class ContactInfoType {
     @XmlType(name = "", propOrder = {
         "value"
     })
-    public static class Web {
+    @ToString public static class Web {
 
         @XmlValue
         protected String value;

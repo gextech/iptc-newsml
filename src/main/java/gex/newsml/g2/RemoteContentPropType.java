@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -80,7 +83,7 @@ import org.w3c.dom.Element;
     "remoteContentExtProperty",
     "any"
 })
-public class RemoteContentPropType {
+@ToString public class RemoteContentPropType {
 
     protected List<RemoteContentPropType.Channel> channel;
     protected List<AltId> altId;
@@ -2130,7 +2133,7 @@ public class RemoteContentPropType {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class Channel {
+    @ToString public static class Channel {
 
         @XmlAttribute(name = "chnlid")
         @XmlSchemaType(name = "positiveInteger")

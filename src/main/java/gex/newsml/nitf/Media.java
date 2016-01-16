@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -60,7 +63,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "media")
-public class Media {
+@ToString public class Media {
 
     @XmlElement(name = "media-metadata")
     protected List<MediaMetadata> mediaMetadata;

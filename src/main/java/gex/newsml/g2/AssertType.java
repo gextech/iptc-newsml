@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -50,7 +53,7 @@ import org.w3c.dom.Element;
 @XmlType(name = "AssertType", propOrder = {
     "any"
 })
-public class AssertType {
+@ToString public class AssertType {
 
     @XmlAnyElement(lax = true)
     protected List<Object> any;

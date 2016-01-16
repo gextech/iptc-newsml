@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -49,7 +52,7 @@ import javax.xml.namespace.QName;
     "name"
 })
 @XmlRootElement(name = "language")
-public class Language {
+@ToString public class Language {
 
     protected List<IntlStringType> name;
     @XmlAttribute(name = "tag", required = true)

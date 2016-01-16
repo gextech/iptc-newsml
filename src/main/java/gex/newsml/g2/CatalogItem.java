@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,7 +48,7 @@ import javax.xml.bind.annotation.XmlType;
     "catalogContainer"
 })
 @XmlRootElement(name = "catalogItem")
-public class CatalogItem
+@ToString public class CatalogItem
     extends AnyItemType
 {
 
@@ -125,7 +128,7 @@ public class CatalogItem
     @XmlType(name = "", propOrder = {
         "catalog"
     })
-    public static class CatalogContainer {
+    @ToString public static class CatalogContainer {
 
         @XmlElement(required = true)
         protected Catalog catalog;

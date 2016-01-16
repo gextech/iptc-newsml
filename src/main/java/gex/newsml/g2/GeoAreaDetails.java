@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -96,7 +99,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "geoAreaDetails")
-public class GeoAreaDetails {
+@ToString public class GeoAreaDetails {
 
     protected GeoCoordinatesType position;
     protected TruncatedDateTimePropType founded;
@@ -590,7 +593,7 @@ public class GeoAreaDetails {
     @XmlType(name = "", propOrder = {
         "position"
     })
-    public static class Circle {
+    @ToString public static class Circle {
 
         @XmlElement(required = true)
         protected GeoCoordinatesType position;
@@ -1015,7 +1018,7 @@ public class GeoAreaDetails {
     @XmlType(name = "", propOrder = {
         "position"
     })
-    public static class Line {
+    @ToString public static class Line {
 
         @XmlElement(required = true)
         protected List<GeoCoordinatesType> position;
@@ -1375,7 +1378,7 @@ public class GeoAreaDetails {
     @XmlType(name = "", propOrder = {
         "position"
     })
-    public static class Polygon {
+    @ToString public static class Polygon {
 
         @XmlElement(required = true)
         protected List<GeoCoordinatesType> position;

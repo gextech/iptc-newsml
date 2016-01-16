@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -57,7 +60,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "personDetails")
-public class PersonDetails {
+@ToString public class PersonDetails {
 
     protected TruncatedDateTimePropType born;
     protected TruncatedDateTimePropType died;

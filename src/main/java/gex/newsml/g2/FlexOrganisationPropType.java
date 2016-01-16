@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -63,7 +66,7 @@ import org.w3c.dom.Element;
 @XmlSeeAlso({
     PersonAffiliationType.class
 })
-public class FlexOrganisationPropType {
+@ToString public class FlexOrganisationPropType {
 
     @XmlElements({
         @XmlElement(name = "name", type = ConceptNameType.class),

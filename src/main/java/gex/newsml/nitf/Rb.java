@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -29,7 +32,7 @@ import javax.xml.bind.annotation.XmlValue;
     "content"
 })
 @XmlRootElement(name = "rb")
-public class Rb {
+@ToString public class Rb {
 
     @XmlValue
     protected String content;

@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import javax.xml.bind.annotation.XmlRegistry;
 
 
@@ -19,7 +22,7 @@ import javax.xml.bind.annotation.XmlRegistry;
  * 
  */
 @XmlRegistry
-public class ObjectFactory {
+@ToString public class ObjectFactory {
 
 
     /**

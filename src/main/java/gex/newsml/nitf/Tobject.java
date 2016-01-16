@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -48,7 +51,7 @@ import javax.xml.namespace.QName;
     "tobjectSubject"
 })
 @XmlRootElement(name = "tobject")
-public class Tobject {
+@ToString public class Tobject {
 
     @XmlElement(name = "tobject.property")
     protected List<TobjectProperty> tobjectProperty;

@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -158,7 +161,7 @@ import org.w3c.dom.Element;
     "itemSet"
 })
 @XmlRootElement(name = "newsMessage")
-public class NewsMessage {
+@ToString public class NewsMessage {
 
     @XmlElement(required = true)
     protected NewsMessage.Header header;
@@ -350,7 +353,7 @@ public class NewsMessage {
         "timestampOrDestinationOrChannel",
         "any"
     })
-    public static class Header {
+    @ToString public static class Header {
 
         @XmlElement(required = true)
         protected DateTimePropType sent;
@@ -933,7 +936,7 @@ public class NewsMessage {
         @XmlType(name = "", propOrder = {
             "title"
         })
-        public static class CatalogRef {
+        @ToString public static class CatalogRef {
 
             protected List<Label1Type> title;
             @XmlAttribute(name = "href", required = true)
@@ -1335,7 +1338,7 @@ public class NewsMessage {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class Channel
+        @ToString public static class Channel
             extends StringType
         {
 
@@ -1575,7 +1578,7 @@ public class NewsMessage {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class Destination
+        @ToString public static class Destination
             extends StringType
         {
 
@@ -1785,7 +1788,7 @@ public class NewsMessage {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class Origin
+        @ToString public static class Origin
             extends StringType
         {
 
@@ -1997,7 +2000,7 @@ public class NewsMessage {
         @XmlType(name = "", propOrder = {
             "value"
         })
-        public static class Priority {
+        @ToString public static class Priority {
 
             @XmlValue
             protected int value;
@@ -2360,7 +2363,7 @@ public class NewsMessage {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class Sender
+        @ToString public static class Sender
             extends StringType
         {
 
@@ -2570,7 +2573,7 @@ public class NewsMessage {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class Timestamp
+        @ToString public static class Timestamp
             extends DateTimePropType
         {
 
@@ -2631,7 +2634,7 @@ public class NewsMessage {
     @XmlType(name = "", propOrder = {
         "any"
     })
-    public static class ItemSet {
+    @ToString public static class ItemSet {
 
         @XmlAnyElement(lax = true)
         protected List<Object> any;

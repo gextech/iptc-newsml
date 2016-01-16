@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -83,7 +86,7 @@ import javax.xml.namespace.QName;
     "scheme"
 })
 @XmlRootElement(name = "catalog")
-public class Catalog {
+@ToString public class Catalog {
 
     protected List<Label1Type> title;
     @XmlElement(required = true)
@@ -640,7 +643,7 @@ public class Catalog {
     @XmlType(name = "", propOrder = {
         "sameAsSchemeOrNameOrDefinition"
     })
-    public static class Scheme {
+    @ToString public static class Scheme {
 
         @XmlElements({
             @XmlElement(name = "sameAsScheme", type = SameAsScheme.class),
@@ -1106,7 +1109,7 @@ public class Catalog {
         @XmlType(name = "", propOrder = {
             "value"
         })
-        public static class SameAs {
+        @ToString public static class SameAs {
 
             @XmlValue
             protected String value;

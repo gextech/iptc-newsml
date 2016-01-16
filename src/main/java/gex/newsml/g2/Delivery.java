@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -49,7 +52,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "delivery")
-public class Delivery {
+@ToString public class Delivery {
 
     @XmlElement(required = true)
     protected List<Link1Type> deliveredItemRef;

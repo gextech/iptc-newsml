@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -54,7 +57,7 @@ import org.w3c.dom.Element;
 @XmlType(name = "Link1Type", propOrder = {
     "any"
 })
-public class Link1Type {
+@ToString public class Link1Type {
 
     @XmlAnyElement(lax = true)
     protected List<Object> any;

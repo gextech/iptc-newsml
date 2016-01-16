@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -33,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlSeeAlso({
     Generator.class
 })
-public class VersionedStringType
+@ToString public class VersionedStringType
     extends IntlStringType
 {
 

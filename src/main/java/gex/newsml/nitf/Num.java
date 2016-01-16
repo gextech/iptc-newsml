@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -52,7 +55,7 @@ import javax.xml.namespace.QName;
     "content"
 })
 @XmlRootElement(name = "num")
-public class Num {
+@ToString public class Num {
 
     @XmlElementRefs({
         @XmlElementRef(name = "frac", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Frac.class, required = false),

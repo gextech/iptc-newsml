@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -57,7 +60,7 @@ import javax.xml.namespace.QName;
     gex.newsml.g2.GroupSet.Group.ConceptRef.class,
     Facet.class
 })
-public class FlexPropType {
+@ToString public class FlexPropType {
 
     @XmlElements({
         @XmlElement(name = "name", type = ConceptNameType.class),

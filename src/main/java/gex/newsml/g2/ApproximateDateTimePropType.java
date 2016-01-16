@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +47,7 @@ import javax.xml.namespace.QName;
 @XmlType(name = "ApproximateDateTimePropType", propOrder = {
     "value"
 })
-public class ApproximateDateTimePropType {
+@ToString public class ApproximateDateTimePropType {
 
     @XmlValue
     protected String value;

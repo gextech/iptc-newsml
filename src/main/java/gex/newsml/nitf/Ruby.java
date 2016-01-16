@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -50,7 +53,7 @@ import javax.xml.bind.annotation.XmlType;
     "content"
 })
 @XmlRootElement(name = "ruby")
-public class Ruby {
+@ToString public class Ruby {
 
     @XmlElementRefs({
         @XmlElementRef(name = "rtc", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Rtc.class, required = false),

@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -79,7 +82,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "organisationDetails")
-public class OrganisationDetails {
+@ToString public class OrganisationDetails {
 
     protected TruncatedDateTimePropType founded;
     protected TruncatedDateTimePropType dissolved;
@@ -552,7 +555,7 @@ public class OrganisationDetails {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class HasInstrument {
+    @ToString public static class HasInstrument {
 
         @XmlAttribute(name = "symbol", required = true)
         protected String symbol;

@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -46,7 +49,7 @@ import javax.xml.namespace.QName;
     "pOrHl2OrTable"
 })
 @XmlRootElement(name = "abstract")
-public class Abstract {
+@ToString public class Abstract {
 
     @XmlElements({
         @XmlElement(name = "p", type = P.class),

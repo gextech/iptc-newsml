@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -49,7 +52,7 @@ import javax.xml.namespace.QName;
     "thOrTd"
 })
 @XmlRootElement(name = "tr")
-public class Tr {
+@ToString public class Tr {
 
     @XmlElements({
         @XmlElement(name = "th", type = Th.class),

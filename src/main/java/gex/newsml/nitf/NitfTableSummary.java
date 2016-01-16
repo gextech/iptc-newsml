@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +47,7 @@ import javax.xml.namespace.QName;
     "p"
 })
 @XmlRootElement(name = "nitf-table-summary")
-public class NitfTableSummary {
+@ToString public class NitfTableSummary {
 
     protected List<P> p;
     @XmlAttribute(name = "id")

@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -47,7 +50,7 @@ import javax.xml.namespace.QName;
     QualPropType.class,
     IncomingFeedId.class
 })
-public class QCodePropType {
+@ToString public class QCodePropType {
 
     @XmlAttribute(name = "qcode")
     protected String qcode;

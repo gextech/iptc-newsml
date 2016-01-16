@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -52,7 +55,7 @@ import org.w3c.dom.Element;
 @XmlType(name = "GeoCoordinatesType", propOrder = {
     "any"
 })
-public class GeoCoordinatesType {
+@ToString public class GeoCoordinatesType {
 
     @XmlAnyElement(lax = true)
     protected List<Object> any;

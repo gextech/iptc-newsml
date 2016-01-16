@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -67,7 +70,7 @@ import javax.xml.namespace.QName;
     "nitfColgroupOrNitfCol"
 })
 @XmlRootElement(name = "nitf-table-metadata")
-public class NitfTableMetadata {
+@ToString public class NitfTableMetadata {
 
     @XmlElement(name = "nitf-table-summary")
     protected NitfTableSummary nitfTableSummary;

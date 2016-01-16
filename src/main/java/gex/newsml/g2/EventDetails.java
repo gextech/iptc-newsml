@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -148,7 +151,7 @@ import org.w3c.dom.Element;
     "any"
 })
 @XmlRootElement(name = "eventDetails")
-public class EventDetails {
+@ToString public class EventDetails {
 
     @XmlElement(required = true)
     protected EventDetails.Dates dates;
@@ -674,7 +677,7 @@ public class EventDetails {
         "exDateOrExRule",
         "confirmation"
     })
-    public static class Dates {
+    @ToString public static class Dates {
 
         @XmlElement(required = true)
         protected ApproximateDateTimePropType start;
@@ -1169,7 +1172,7 @@ public class EventDetails {
         @XmlType(name = "", propOrder = {
             "value"
         })
-        public static class Duration {
+        @ToString public static class Duration {
 
             @XmlValue
             protected javax.xml.datatype.Duration value;
@@ -1521,7 +1524,7 @@ public class EventDetails {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class ExRule {
+        @ToString public static class ExRule {
 
             @XmlAttribute(name = "freq", required = true)
             protected String freq;
@@ -2278,7 +2281,7 @@ public class EventDetails {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class RRule {
+        @ToString public static class RRule {
 
             @XmlAttribute(name = "id")
             @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -3037,7 +3040,7 @@ public class EventDetails {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class Location
+    @ToString public static class Location
         extends FlexLocationPropType
     {
 
@@ -3145,7 +3148,7 @@ public class EventDetails {
         "languageOrGenreOrKeyword",
         "any"
     })
-    public static class NewsCoverage {
+    @ToString public static class NewsCoverage {
 
         @XmlElement(name = "g2contentType")
         protected EventDetails.NewsCoverage.G2ContentType g2ContentType;
@@ -3491,7 +3494,7 @@ public class EventDetails {
         @XmlType(name = "", propOrder = {
             "value"
         })
-        public static class G2ContentType {
+        @ToString public static class G2ContentType {
 
             @XmlValue
             protected String value;
@@ -3845,7 +3848,7 @@ public class EventDetails {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class ParticipationRequirement
+    @ToString public static class ParticipationRequirement
         extends Flex1PropType
     {
 

@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -52,7 +55,7 @@ import javax.xml.namespace.QName;
     Keyword.class,
     Creditline.class
 })
-public class IntlStringType {
+@ToString public class IntlStringType {
 
     @XmlValue
     protected String value;

@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,7 +43,7 @@ import javax.xml.namespace.QName;
     "content"
 })
 @XmlRootElement(name = "copyrite.year")
-public class CopyriteYear {
+@ToString public class CopyriteYear {
 
     @XmlValue
     protected String content;

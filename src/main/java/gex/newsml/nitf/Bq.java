@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -55,7 +58,7 @@ import javax.xml.namespace.QName;
     "blockAndCredit"
 })
 @XmlRootElement(name = "bq")
-public class Bq {
+@ToString public class Bq {
 
     @XmlElements({
         @XmlElement(name = "block", type = Block.class),

@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -34,7 +37,7 @@ import javax.xml.namespace.QName;
 @XmlSeeAlso({
     Flex2ExtPropType.class
 })
-public class Flex1ExtPropType
+@ToString public class Flex1ExtPropType
     extends Flex1PropType
 {
 

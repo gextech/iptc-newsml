@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,7 +48,7 @@ import javax.xml.namespace.QName;
     "bodyContent"
 })
 @XmlRootElement(name = "fn")
-public class Fn {
+@ToString public class Fn {
 
     @XmlElement(name = "body.content", required = true)
     protected List<BodyContent> bodyContent;

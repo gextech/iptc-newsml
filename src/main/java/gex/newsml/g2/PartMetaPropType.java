@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -115,7 +118,7 @@ import org.w3c.dom.Element;
     "link",
     "any"
 })
-public class PartMetaPropType {
+@ToString public class PartMetaPropType {
 
     protected List<Icon> icon;
     protected List<PartMetaPropType.TimeDelim> timeDelim;
@@ -950,7 +953,7 @@ public class PartMetaPropType {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class RegionDelim {
+    @ToString public static class RegionDelim {
 
         @XmlAttribute(name = "x")
         protected BigInteger x;
@@ -1406,7 +1409,7 @@ public class PartMetaPropType {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class TimeDelim {
+    @ToString public static class TimeDelim {
 
         @XmlAttribute(name = "start", required = true)
         protected String start;

@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -49,7 +52,7 @@ import javax.xml.namespace.QName;
     gex.newsml.g2.NewsMessage.Header.Destination.class,
     gex.newsml.g2.NewsMessage.Header.Channel.class
 })
-public class StringType {
+@ToString public class StringType {
 
     @XmlValue
     protected String value;

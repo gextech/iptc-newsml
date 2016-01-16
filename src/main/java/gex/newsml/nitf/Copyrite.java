@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -48,7 +51,7 @@ import javax.xml.namespace.QName;
     "content"
 })
 @XmlRootElement(name = "copyrite")
-public class Copyrite {
+@ToString public class Copyrite {
 
     @XmlElementRefs({
         @XmlElementRef(name = "copyrite.year", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = CopyriteYear.class, required = false),

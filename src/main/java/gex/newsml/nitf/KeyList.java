@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +47,7 @@ import javax.xml.namespace.QName;
     "keyword"
 })
 @XmlRootElement(name = "key-list")
-public class KeyList {
+@ToString public class KeyList {
 
     protected List<Keyword> keyword;
     @XmlAttribute(name = "id")

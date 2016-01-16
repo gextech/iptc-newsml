@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,7 +46,7 @@ import javax.xml.namespace.QName;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "userInteraction")
-public class UserInteraction {
+@ToString public class UserInteraction {
 
     @XmlAttribute(name = "interactions", required = true)
     @XmlSchemaType(name = "nonNegativeInteger")

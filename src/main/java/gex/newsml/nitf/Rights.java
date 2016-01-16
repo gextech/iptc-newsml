@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -53,7 +56,7 @@ import javax.xml.namespace.QName;
     "content"
 })
 @XmlRootElement(name = "rights")
-public class Rights {
+@ToString public class Rights {
 
     @XmlElementRefs({
         @XmlElementRef(name = "rights.enddate", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = RightsEnddate.class, required = false),

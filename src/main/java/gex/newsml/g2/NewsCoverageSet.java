@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,7 +48,7 @@ import javax.xml.namespace.QName;
     "newsCoverage"
 })
 @XmlRootElement(name = "newsCoverageSet")
-public class NewsCoverageSet {
+@ToString public class NewsCoverageSet {
 
     @XmlElement(required = true)
     protected List<NewsCoverage> newsCoverage;

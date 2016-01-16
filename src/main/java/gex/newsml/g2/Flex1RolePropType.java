@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -59,7 +62,7 @@ import org.w3c.dom.Element;
     "sameAsOrBroaderOrNarrower",
     "any"
 })
-public class Flex1RolePropType {
+@ToString public class Flex1RolePropType {
 
     @XmlElements({
         @XmlElement(name = "name", type = ConceptNameType.class),

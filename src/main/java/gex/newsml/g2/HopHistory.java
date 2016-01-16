@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -81,7 +84,7 @@ import javax.xml.namespace.QName;
     "hop"
 })
 @XmlRootElement(name = "hopHistory")
-public class HopHistory {
+@ToString public class HopHistory {
 
     @XmlElement(required = true)
     protected List<HopHistory.Hop> hop;
@@ -483,7 +486,7 @@ public class HopHistory {
         "party",
         "action"
     })
-    public static class Hop {
+    @ToString public static class Hop {
 
         protected HopHistory.Hop.Party party;
         protected List<HopHistory.Hop.Action> action;
@@ -937,7 +940,7 @@ public class HopHistory {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class Action
+        @ToString public static class Action
             extends QualPropType
         {
 
@@ -1043,7 +1046,7 @@ public class HopHistory {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
-        public static class Party
+        @ToString public static class Party
             extends FlexPartyPropType
         {
 

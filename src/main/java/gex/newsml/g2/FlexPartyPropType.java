@@ -1,6 +1,9 @@
 
 package gex.newsml.g2;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -69,7 +72,7 @@ import org.w3c.dom.Element;
     gex.newsml.g2.HopHistory.Hop.Party.class,
     Flex1PartyPropType.class
 })
-public class FlexPartyPropType {
+@ToString public class FlexPartyPropType {
 
     @XmlElements({
         @XmlElement(name = "name", type = ConceptNameType.class),

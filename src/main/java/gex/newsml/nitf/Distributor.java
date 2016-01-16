@@ -1,6 +1,9 @@
 
 package gex.newsml.nitf;
 
+import lombok.ToString;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -46,7 +49,7 @@ import javax.xml.namespace.QName;
     "content"
 })
 @XmlRootElement(name = "distributor")
-public class Distributor {
+@ToString public class Distributor {
 
     @XmlElementRef(name = "org", namespace = "http://iptc.org/std/NITF/2006-10-18/", type = Org.class, required = false)
     @XmlMixed
